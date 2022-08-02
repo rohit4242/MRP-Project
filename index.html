@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testing</title>
+    <title>MRP Project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    hello 
-    
+    <div class="connection">
+        <p style="color: green;">Connected</p>
+    </div>
+<!-- live status bar section -->
+    <section class="live-status head-style">
+        <div id="live-data" class="flex justify-between items-center">
+            <div id="temp"class="flex justify-between items-center">
+                <h2 style="color: #afa016;">Temprature <img src="svg/summer-rain-svgrepo-com.svg" height="20px" width="25px"> :</h2>
+                <h2 style="color: green">47 C</h2>
+            </div>
+            <div id="soil-moisture" class="flex justify-between items-center">
+                <h2 style="color: #6b673f;">Soil Moisture <img src="svg/soil-moisture-svgrepo-com.svg" height="20px" width="25px"> :</h2>
+                <h2 style="color: green">1000</h2>
+            </div>
+            <div id="humidity" class="flex justify-between items-center">
+                <h2 style="color: #6b673f;">Humidity <img src="svg/cloud-rainy-weather-sun-rain-svgrepo-com.svg" height="20px" width="25px"> :</h2>
+                <h2 style="color: green">500</h2>
+            </div>
+            <div id ="status" class="flex justify-between items-center">
+                <h2 style="color: #c93c3c;">Status :</h2>
+                <h2 style="color:green">OFF</h2>
+            </div>
+        </div>
+    </section>
+<!-- force start and stop -->
+    <section>
+        <div id="force" class="flex items-center flex-start">
+            <div style="margin-right:10px; color: red;">
+                <h1>Force To </h1>
+            </div>
+            <div>
+                <button>Start</button>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
