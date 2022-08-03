@@ -71,6 +71,14 @@ body{
     color: rgb(255, 255, 255);
     cursor: pointer;
   }
+  #cp{
+    padding-left: 120px;
+    color: #DE3163;
+  }
+  #cp-temp{
+    padding-left: 50px;
+    color: #ee6939;
+  }
  
   .card-02{
     background: #50A7FF;
