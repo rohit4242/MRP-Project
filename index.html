@@ -12,37 +12,33 @@
         <p style="color: green;">Connected</p>
     </div>
 <!-- live status bar section -->
-    <section class="live-status head-style">
-        <div id="live-data" class="flex justify-between items-center">
-            <div id="temp"class="flex justify-between items-center">
-                <h2 style="color: #afa016;">Temprature <img src="svg/summer-rain-svgrepo-com.svg" height="20px" width="25px"> :</h2>
-                <h2 style="color: green">47 C</h2>
-            </div>
-            <div id="soil-moisture" class="flex justify-between items-center">
-                <h2 style="color: #6b673f;">Soil Moisture <img src="svg/soil-moisture-svgrepo-com.svg" height="20px" width="25px"> :</h2>
-                <h2 style="color: green">1000</h2>
-            </div>
-            <div id="humidity" class="flex justify-between items-center">
-                <h2 style="color: #6b673f;">Humidity <img src="svg/cloud-rainy-weather-sun-rain-svgrepo-com.svg" height="20px" width="25px"> :</h2>
-                <h2 style="color: green">500</h2>
-            </div>
-            <div id ="status" class="flex justify-between items-center">
-                <h2 style="color: #c93c3c;">Status :</h2>
-                <h2 style="color:green">OFF</h2>
-            </div>
+  <!--card layout start-->
+  <div class="container">
+    <div class="row">
+      <div class="live-data">
+        <h3 id="temp">Temprature:<img src="svg/temperature-svgrepo-com.svg" width="25px"> 45 C</h3>
+        <h3 id="soil-moisture">Soil Moisture:<img src="svg/soil-moisture-svgrepo-com.svg" width="25px"> 100</h3>
+        <h3 id="humidity">Humidity:<img src="svg/cloud-rainy-weather-sun-rain-svgrepo-com.svg" width="25px"> 95%</h3>
+        <h3 id="status">Status: OFF</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card-02">
+       
+        <div class="card-11">
+            <h2 id="mode">Switch To (<span id="manual">Manual</span>) Mode</h2>
         </div>
-    </section>
-<!-- force start and stop -->
-    <section>
-        <div id="force" class="flex items-center flex-start">
-            <div style="margin-right:10px; color: red;">
-                <h1>Force To </h1>
-            </div>
-            <div>
-                <button>Start</button>
-            </div>
+        <div class="card-12">
+            <h1 id="force">Force To <span id="start-stop">Start</span></h1>
         </div>
-    </section>
+      </div>
+      <div class="card-02"></div>
+    </div>
+    <div class="row">
+      <div class="card-03"></div>
+    </div>
+  </div>
+  <!--card layout end-->
 
 </body>
 </html>
