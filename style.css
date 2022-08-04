@@ -55,31 +55,45 @@ body{
     cursor: pointer;
   }
   #force{
-    margin: 10px;
-    padding-top: 60px;
-    padding-left: 10px;
-    color: #40E0D0;
+    padding-top: 30px;
+    padding-left: 30px;
+    color: #007267;
   }
-  #start-stop{
-    color: lightcoral;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color:#40E0D0;
-  }
-  #start-stop:hover{
-    background-color: #DE3163;
-    color: rgb(255, 255, 255);
+
+  button{
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 60px;
+    border-radius: 5px;
     cursor: pointer;
   }
-  #cp{
+  button:hover{
+    opacity: 0.8;
+  }
+  button:active{
+    opacity: 0.5;
+  }
+  #current-preset{
     padding-left: 120px;
     color: #DE3163;
   }
-  #cp-temp{
+  #cp{
     padding-left: 50px;
     color: #ee6939;
   }
- 
+  
+  #var-temp{
+    color: #03D29F;
+  }
+  #var-soil-moisture{
+    color: #FF7675;
+  }
+  #var-humidity{
+    color: blue;
+  }
   .card-02{
     background: #50A7FF;
     position: relative;
@@ -113,12 +127,13 @@ body{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   .card-12{
-    background: #ffd050;
+    background: #8ddaf1;
     position: relative;
     flex: 1;
     max-width: 60%;
-    height: 170px;
-    margin: 10px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 80px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
