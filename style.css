@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 200vh;
   }
   
   .container{
@@ -19,7 +19,7 @@ body{
     background: #03D29F;
     position: relative;
     flex: 1;
-    max-width: 950px;
+    max-width: 220px;
     height: 70px;
     margin: 10px;
     border-radius: 5px;
@@ -32,18 +32,23 @@ body{
 
   #temp{
     color: #eb4319;
+    margin: 18px;
   }
   #soil-moisture{
     color: #ff7626;
+    margin: 18px;
   }
   #humidity{
     color: rgb(6, 132, 136);
+    margin: 18px;
   }
   #status{
-    color: #19ff25;
+    color: #db2c2c;
+    margin: 25px;
+    padding-left: 30px;
   }
   #mode{
-    margin: 10px;
+    margin: 0;
     padding-top: 35px;
     padding-left: 80px;
   }
@@ -55,16 +60,18 @@ body{
     cursor: pointer;
   }
   #force{
-    padding-top: 30px;
-    padding-left: 30px;
+    margin: 0;
+    padding-top: 60px;
     color: #007267;
   }
 
   button{
-    margin-left: 10px;
     background-color: red;
     color: white;
     border: none;
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 20px;
     height: 40px;
     width: 60px;
     border-radius: 5px;
@@ -82,19 +89,84 @@ body{
   }
   #cp{
     padding-left: 50px;
-    color: #ee6939;
+    color: #3417da;
   }
   
   #var-temp{
-    color: #03D29F;
+    color: #03f0b5;
   }
   #var-soil-moisture{
-    color: #FF7675;
+    color: #03f0b5;
   }
   #var-humidity{
-    color: blue;
+    color: #03f0b5;
   }
+  #crop{
+    color: #068034;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+  }
+  #crop-item{
+    color: red;
+  }
+  #user-guide{
+    margin-top: 40px;
+    margin-left: 60px;
+    font-size: 20px;
+  }
+  a:hover{
+    color: #007267;
+    cursor: pointer;
+  }
+  a:active{
+    color: rgb(32, 240, 143);
+  }
+  .card-01{
+    background: #50A7FF;
+    position: relative;
+    flex: 1;
+    max-width: 220px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    justify-items: center;
+  }
+
   .card-02{
+    background: #50A7FF;
+    position: relative;
+    flex: 1;
+    max-width: 220px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .card-03{
+    background: #50A7FF;
+    position: relative;
+    flex: 1;
+    max-width: 220px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .card-04{
+    background: #50A7FF;
+    position: relative;
+    flex: 1;
+    max-width: 220px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .card-05{
     background: #50A7FF;
     position: relative;
     flex: 1;
@@ -105,11 +177,11 @@ body{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
-  .card-03{
+  .card-06{
     background: #FF7675;
     position: relative;
     flex: 1;
-    max-width: 940px;
+    max-width: 460px;
     height: 300px;
     margin: 10px;
     border-radius: 5px;
@@ -128,17 +200,24 @@ body{
   }
   .card-12{
     background: #8ddaf1;
-    position: relative;
-    flex: 1;
-    max-width: 60%;
-    height: 100px;
-    margin-top: 50px;
-    margin-left: 80px;
+    display: inline-block;
+    margin-left: 10px;
+    max-width: 50%;
+    height: 170px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .card-13{
+    background: #8ddaf1;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 50%;
+    height: 170px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
-  @media (max-width:800px){
+  @media (max-width:600px){
     .card-01{
       flex: 100%;
       max-width: 600px;
@@ -152,5 +231,22 @@ body{
     .card-03{
       flex: 100%;
       max-width: 600px;
+    }
+  }
+
+  @media (max-width:900px){
+    .card-01{
+      flex: 100%;
+      max-width: 900px;
+    }
+  
+    .card-02{
+      flex: 100%;
+      max-width: 900px;
+    }
+  
+    .card-03{
+      flex: 100%;
+      max-width: 900px;
     }
   }

@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MRP Project</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MRP Project</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="connection">
-        <p style="color: green;">Connected</p>
-    </div>
-<!-- live status bar section -->
+  <div class="connection">
+    <p style="color: green;">Connected</p>
+  </div>
   <!--card layout start-->
   <div class="container">
+
+    <!-- live status bar section start -->
     <div class="row">
-      <div class="live-data">
+      <div class="card-01">
         <h3 id="temp">Temprature:<img src="svg/temperature-svgrepo-com.svg" width="25px"> 45 C</h3>
+      </div>
+      <div class="card-02">
         <h3 id="soil-moisture">Soil Moisture:<img src="images/soil.png" width="25px"> 100</h3>
+      </div>
+      <div class="card-03">
         <h3 id="humidity">Humidity:<img src="svg/cloud-rainy-weather-sun-rain-svgrepo-com.svg" width="25px"> 95%</h3>
+      </div>
+      <div class="card-04">
         <h3 id="status">Status: OFF</h3>
       </div>
     </div>
+    <!-- live status bar section end-->
+
+      <!-- manual mode section start-->
     <div class="row">
-      <div class="card-02">
-       
+      <div class="card-05">
+
         <div class="card-11">
-            <h2 id="mode">Switch To (<span id="manual">Manual</span>) Mode</h2>
+          <h2 id="mode">Switch To (<span id="manual">Manual</span>) Mode</h2>
         </div>
+
         <div class="card-12">
-            <h1 id="force">Force To <button>START</button></h1>
+          <h1 id="force">Force To <button>START</button></h1>
+        </div>
+        <div class="card-13">
+          <div id="crop">Current Crop(<span id="crop-item">Anything</span>)</div>
+          <hr>
+          <div id="user-guide"><a href="user-guide.html">User Guide</a></div>
         </div>
       </div>
-      <div class="card-02">
+      <!-- manual mode section end-->
+      <div class="card-06">
         <h1 id="current-preset">Current Preset</h1>
         <hr>
         <h3 id="cp">Temprature : <span id="var-temp">45&#8451;</span></h3>
         <h3 id="cp">Soil Moisture : <span id="var-soil-moisture">512</span></h3>
         <h3 id="cp">Humidity : <span id="var-humidity">45%</span></h3>
-
       </div>
-    </div>
-    <div class="row">
-      <div class="card-03"></div>
     </div>
   </div>
   <!--card layout end-->
 
 </body>
+
 </html>
