@@ -48,9 +48,8 @@ body{
     padding-left: 30px;
   }
   #mode{
-    margin: 0;
-    padding-top: 35px;
-    padding-left: 80px;
+    padding-top: 30px;
+    text-align: center;
   }
   #manual{
     color: #eb4319;
@@ -61,8 +60,8 @@ body{
   }
   #force{
     margin: 0;
-    padding-top: 60px;
     color: #007267;
+    text-align: center;
   }
 
   button{
@@ -84,8 +83,8 @@ body{
     opacity: 0.5;
   }
   #current-preset{
-    padding-left: 120px;
     color: #DE3163;
+    text-align: center;
   }
   #cp{
     padding-left: 50px;
@@ -104,19 +103,16 @@ body{
   #crop{
     color: #068034;
     font-size: 18px;
-    margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 20px;
+    text-align: center;
   }
   #crop-item{
     color: red;
   }
   #user-guide{
-    margin-top: 40px;
-    margin-left: 60px;
     font-size: 20px;
+    text-align: center;
   }
+
   a:hover{
     color: #007267;
     cursor: pointer;
@@ -124,6 +120,7 @@ body{
   a:active{
     color: rgb(32, 240, 143);
   }
+
   .card-01{
     background: #50A7FF;
     position: relative;
@@ -198,25 +195,6 @@ body{
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
-  .card-12{
-    background: #8ddaf1;
-    display: inline-block;
-    margin-left: 10px;
-    max-width: 50%;
-    height: 170px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  .card-13{
-    background: #8ddaf1;
-    display: inline-block;
-    vertical-align: top;
-    max-width: 50%;
-    height: 170px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  
   @media (max-width:600px){
     .card-01{
       flex: 100%;
