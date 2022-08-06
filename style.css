@@ -212,19 +212,19 @@ body{
     }
   }
 
-  @media (max-width:900px){
+  @media (max-width:920px){
     .card-01{
       flex: 100%;
-      max-width: 900px;
+      max-width: 920px;
     }
   
     .card-02{
       flex: 100%;
-      max-width: 900px;
+      max-width: 920px;
     }
   
     .card-03{
       flex: 100%;
-      max-width: 900px;
+      max-width: 920px;
     }
   }

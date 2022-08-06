@@ -7,8 +7,6 @@ function startStop()
         btn.innerHTML = "STOP";
         status.innerHTML = "ON";
         status.style = "color: green;";
-      
-
     }
     else{
         btn.innerHTML = "START";
