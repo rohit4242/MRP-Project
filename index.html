@@ -28,7 +28,7 @@
         <h3 id="humidity">Humidity:<img src="svg/cloud-rainy-weather-sun-rain-svgrepo-com.svg" width="25px"> 95%</h3>
       </div>
       <div class="card-04">
-        <h3 id="status">Status: OFF</h3>
+        <h3 id="status">Status: <span id="motor-status">OFF</span></h3>
       </div>
     </div>
     <!-- live status bar section end-->
@@ -38,9 +38,9 @@
       <div class="card-05">
 
         <div class="card-11">
-          <h2 id="mode">Switch To (<span id="manual">Manual</span>) Mode</h2>
+          <h2 id="mode">Switch To (<span id="manual" onclick="mode()">Manual</span>) Mode</h2>
         </div>
-        <h1 id="force">Force To <button id="start-stop">START</button></h1>
+        <h1 id="force">Force To <button id="start-stop" onclick="startStop()">START</button></h1>
         <hr>
         <h3 id="crop">Current Crop(<span id="crop-item">Anything</span>)</h3>
         <hr>
@@ -48,7 +48,7 @@
         <h1 id="user-guide"><a href="user-guide.html" >User Guide</a></h1>
       </div>
       <!-- manual mode section end-->
-      <div class="card-06">
+      <div class="card-06" id="card-cp">
         <h1 id="current-preset">Current Preset</h1>
         <hr>
         <h3 id="cp">Temprature : <span id="var-temp">45&#8451;</span></h3>
@@ -57,8 +57,7 @@
       </div>
   </div>
   <!--card layout end-->
+  <script src="script.js"></script>
 </body>
-
-
 
 </html>
