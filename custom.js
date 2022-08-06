@@ -4,7 +4,7 @@ const myChart = new Chart(ctx, {
     data: {
         labels: ['Tempratur', 'Humidity', 'moisture', 'soil moisture'],
         datasets: [{
-            label: 'value',
+            label: 'live data',
             data: [45, 800, 1200, 900],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
