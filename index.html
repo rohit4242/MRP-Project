@@ -11,11 +11,10 @@
 
 <body>
   <div class="connection">
-    <p style="color: green;">Connected</p>
+    <p style="color: #00cc99">Connected</p>
   </div>
   <!--card layout start-->
   <div class="container">
-
     <!-- live status bar section start -->
     <div class="row">
       <div class="card-01">
@@ -36,24 +35,41 @@
     <!-- manual mode section start-->
     <div class="row">
       <div class="card-05">
-        <h3 class="force"id="start-stop" onclick="startStop()">Force Start</h3>
+        <h3 class="force-start"id="start-stop" onclick="startStop()">Force Start</h3>
         <hr>
-        <h3 class="force"id="start-stop" onclick="startStop()">Force Start</h3>
+        <div class="change-crop">
+          <label id="change-crop-label">Change Crop:</label>
+          <select name="crop" id="select-crop">
+              <option value="volvo">Bhindo</option>
+              <option value="saab">Bajaro</option>
+              <option value="mercedes">Kapas</option>
+              <option value="audi">Mandvi</option>
+          </select>
+         </div>
         <hr>
-        <h3 class="force"id="start-stop" onclick="startStop()">Force Start</h3>
+        <h3 class="switch-mode"id="switch-mode" onclick="switchMode()">Switch To Manual Mode</h3>
         <hr>
-        <h3 id="user-guide"><a href="interface.jpg" >User Guide</a></h3>
+        <h3 id="user-guide"><a href="interface.jpg" target="_blank">User Guide</a></h3>
       </div>
       <!-- manual mode section end-->
       <div class="card-06" id="card-cp">
         <h1 id="current-preset">Current Preset</h1>
         <hr>
-        <h3 id="cp">Temprature : <span id="var-temp">45&#8451;</span></h3>
+        <h3 id="cp">Temprature : <span id="var-temp">35</span>
+          <span style="color:#00cc99">&#8451;</span>
+        </h3>
+        <Input class="range"id="range1" type="range" value="35" min="20" max="60" onChange="temp_rs(this.value)" onmousemove="temp_rs(this.value)"></Input>
         <h3 id="cp">Soil Moisture : <span id="var-soil-moisture">512</span></h3>
-        <h3 id="cp">Humidity : <span id="var-humidity">45%</span></h3>
+        <Input class="range"id="range2" type="range" value="512" min="0" max="1023" onChange="soil_Moisture_rs(this.value)" onmousemove="soil_Moisture_rs(this.value)"></Input>
+        <h3 id="cp">Humidity : <span id="var-humidity">45</span>
+          <span style="color:#00cc99">%</span>
+        </h3>
+        <Input class="range"id="range3" type="range" value="45" min="20" max="70" onChange="humidity_rs(this.value)" onmousemove="humidity_rs(this.value)"></Input>
+        <h3 id="cp"></h3>
+        <h3 id="cp"></h3>
       </div>
+    </div>
   </div>
-  <canvas id="myChart" aria-label="chart" role="img"></canvas>
   <!--card layout end-->
   <script src="script.js"></script>
   <script src="chart.js"></script>

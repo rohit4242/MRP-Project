@@ -17,7 +17,7 @@ body{
   justify-content: center;
   flex-wrap: wrap;
 }
-
+/* ========live data status========= */
 .live-data{
   background: #03D29F;
   position: relative;
@@ -50,18 +50,8 @@ body{
   margin: 25px;
   padding-left: 30px;
 }
-#mode{
-  padding-top: 30px;
-  text-align: center;
-}
-#manual{
-  color:  #00cc99;
-}
-#manual:hover{
-  color: #6495ED;
-  cursor: pointer;
-}
-.force{
+/* =========mode settings========== */
+.force-start{
   margin: 0;
   background-color: #00cc99;
   color: white;
@@ -74,49 +64,129 @@ body{
   padding-top: 15px;
 }
 
-.force:hover{
+.force-start:hover{
   opacity: 0.8;
 }
-.force:active{
+.force-start:active{
   opacity: 0.5;
 }
-#current-preset{
-  color: #DE3163;
+
+.switch-mode{
+  margin: 0;
+  background-color: #00cc99;
+  color: white;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
   text-align: center;
-}
-#cp{
-  padding-left: 50px;
-  color: #3417da;
+  padding-top: 15px;
 }
 
-#var-temp{
-  color: #03f0b5;
+.switch-mode:hover{
+  opacity: 0.8;
 }
-#var-soil-moisture{
-  color: #03f0b5;
+.switch-mode:active{
+  opacity: 0.5;
 }
-#var-humidity{
-  color: #03f0b5;
-}
-#crop{
-  color: #03f0b5;
-  text-align: center;
-}
-#crop-item{
+
+.change-crop{
+  margin: 0;
   color: white;
+  border: none;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  padding-top: 5px;
 }
+.change-crop:hover{
+  opacity: 0.8;
+}
+.change-crop:active{
+  opacity: 0.5;
+}
+#change-crop-label{
+  font-family:sans-serif;
+  font-size: 17.55px;
+  font-weight: bold;
+}
+#select-crop{
+  font-family:sans-serif;
+  font-size: 17.55px;
+  background-color:#00cc99;
+  color: white;
+  border: 1px solid rgb(37, 66, 52);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 #user-guide{
   text-align: center;
+  color: white;
+  margin-top: 12px;
 }
-
+a{
+  color:white;
+  text-decoration: none;
+}
 a:hover{
-  color: #007267;
+  color:#00cc99;
   cursor: pointer;
 }
 a:active{
   color: rgb(32, 240, 143);
 }
 
+/* ==========current presets========== */
+#current-preset{
+  color: white;
+  text-align: center;
+  font-size:20px;
+}
+#cp{
+  padding-left: 20px;
+  color: white;
+  font-size:16px;
+}
+
+#var-temp{
+  color: #03f0b5;
+  margin-left: 84px;
+}
+#var-soil-moisture{
+  margin-left: 70px;
+  color: #03f0b5;
+}
+#var-humidity{
+  margin-left: 105px;
+  color: #03f0b5;
+}
+/* =========================== */
+
+.range {
+  margin-left: 20px;
+  width: 400px;
+  height: 10px;
+  -webkit-appearance: none;
+  background:#1f1f2e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background:#00cc99;
+  cursor: pointer;
+  border: 3px solid #333;
+  box-shadow: -407px 0 0 400px #00cc99;
+}
+
+/* ========================== */
 .card-01{
   background: #29293d;
   position: relative;
@@ -164,7 +234,7 @@ a:active{
   position: relative;
   flex: 1;
   max-width: 460px;
-  height: 300px;
+  height: 260px;
   margin: 10px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -175,10 +245,11 @@ a:active{
   position: relative;
   flex: 1;
   max-width: 460px;
-  height: 300px;
+  height: 260px;
   margin: 10px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
 }
 
 hr{
