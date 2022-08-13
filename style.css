@@ -258,6 +258,44 @@ hr{
   border: none;
   }
 
+  @media only screen
+  and (min-device-width : 200px) and (max-device-width : 300px){
+  /* Styles */
+  .card-01{
+    flex: 100%;
+    max-width: 150px;
+  }
+  
+  .card-02{
+    flex: 100%;
+    max-width: 150px;
+  }
+  
+  .card-03{
+    flex: 100%;
+    max-width: 150px;
+  }
+    
+  .card-04{
+    flex: 100%;
+    max-width: 150px;
+  }
+  
+  .card-05{
+    flex: 100%;
+    max-width: 250px;
+  }
+  
+  .card-06{
+    flex: 100%;
+    max-width: 250px;
+  }
+  .range{
+    max-width: 150px;
+  }
+  
+ }
+  
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
