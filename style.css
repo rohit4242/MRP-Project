@@ -288,6 +288,9 @@ and (max-device-width : 480px) {
   flex: 100%;
   max-width: 350px;
 }
+.range{
+  max-width:180px;
+}
 
 }
 
