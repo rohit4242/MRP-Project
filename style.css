@@ -257,36 +257,148 @@ hr{
   background-color: #3d3d5c;
   border: none;
   }
-@media (max-width:600px){
-  .card-01{
-    flex: 100%;
-    max-width: 600px;
-  }
 
-  .card-02{
-    flex: 100%;
-    max-width: 600px;
-  }
 
-  .card-03{
-    flex: 100%;
-    max-width: 600px;
-  }
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+.card-01{
+  flex: 100%;
+  max-width: 320px;
 }
 
-@media (max-width:920px){
-  .card-01{
-    flex: 100%;
-    max-width: 920px;
-  }
+.card-02{
+  flex: 100%;
+  max-width: 320px;
+}
 
-  .card-02{
-    flex: 100%;
-    max-width: 920px;
-  }
+.card-03{
+  flex: 100%;
+  max-width: 320px;
+}
 
-  .card-03{
-    flex: 100%;
-    max-width: 920px;
-  }
+.card-05{
+  flex: 100%;
+  max-width: 350px;
+}
+
+.card-06{
+  flex: 100%;
+  max-width: 350px;
+}
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media (min-width: 481px) and (max-width: 767px) {
+/* Styles */
+body{
+  font-size: 10px;
+}
+
+.card-01{
+  flex: 100%;
+  max-width: 150px;
+}
+
+.card-02{
+  flex: 100%;
+  max-width: 150px;
+}
+
+.card-03{
+  flex: 100%;
+  max-width: 150px;
+}
+.card-04{
+  flex: 100%;
+  max-width: 150px;
+}
+.card-05{
+  flex: 100%;
+  max-width: 260px;
+}
+.card-06{
+  flex: 100%;
+  max-width: 260px;
+}
+
+.range{
+  max-width:200px;
+}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media (min-width: 768px) and (max-width: 1024px){
+/* Styles */
+body{
+  font-size:10px;
+}
+.card-01{
+  flex: 100%;
+  max-width: 170px;
+}
+
+.card-02{
+  flex: 100%;
+  max-width: 170px;
+}
+
+.card-03{
+  flex: 100%;
+  max-width: 170px;
+}
+.card-04{
+  flex: 100%;
+  max-width: 150px;
+}
+.card-05{
+  flex: 100%;
+  max-width: 350px;
+}
+
+.card-06{
+  flex: 100%;
+  max-width: 350px;
+}
+.range{
+  max-width: 300px;
+}
+}
+
+/* Desktops and laptops ----------- */
+@media (min-width: 1025px) and (max-width: 1280px) {
+/* Styles */
+.card-01{
+  flex: 100%;
+  max-width: 220px;
+}
+
+.card-02{
+  flex: 100%;
+  max-width: 220px;
+}
+
+.card-03{
+  flex: 100%;
+  max-width: 220px;
+}
+.card-04{
+  flex: 100%;
+  max-width: 220px;
+}
+
+.card-05{
+  flex: 100%;
+  max-width: 480px;
+}
+
+.card-06{
+  flex: 100%;
+  max-width: 480px;
+}
+
 }
