@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
   <div class="connection">
     <p style="color: #00cc99">Connected</p>
@@ -18,13 +19,13 @@
     <!-- live status bar section start -->
     <div class="row">
       <div class="card-01">
-        <h3 id="temp">Temprature:<img src="svg/temp-svg.svg" width="25px"> 45 C</h3>
+        <h3 id="temp">Temprature:<img src="svg/temp-svg.svg" width="25px"><span id="temp_live_data">0 C</span></h3>
       </div>
       <div class="card-02">
-        <h3 id="soil-moisture">Soil Moisture:<img src="svg/soil.svg" width="25px"> 100</h3>
+        <h3 id="soil-moisture">Soil Moisture:<img src="svg/soil.svg" width="25px"> <span id="soil_live_data">0</span></h3>
       </div>
       <div class="card-03">
-        <h3 id="humidity">Humidity:<img src="svg/rain.svg" width="25px"> 95%</h3>
+        <h3 id="humidity">Humidity:<img src="svg/rain.svg" width="25px"> <span id="hum_live_data">0%</span></h3>
       </div>
       <div class="card-04">
         <h3 id="status">Status: <span id="motor-status">OFF</span></h3>
@@ -74,6 +75,7 @@
   <script src="script.js"></script>
   <script src="chart.js"></script>
   <script src="custom.js"></script>
+ 
 </body>
 
 </html>

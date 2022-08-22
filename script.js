@@ -49,7 +49,6 @@ function switchMode(){
   }
 }
 
-
 function temp_rs(value) {
   document.getElementById('var-temp').innerHTML = value;
 }
@@ -59,3 +58,31 @@ function soil_Moisture_rs(value) {
 function humidity_rs(value) {
   document.getElementById('var-humidity').innerHTML = value;
 }
+
+let temp_live_data = document.getElementById("temp_live_data");
+let hum_live_data = document.getElementById("hum_live_data");
+let soil_live_data = document.getElementById("soil_live_data");
+
+function field1()
+{
+  fetch('https://api.thingspeak.com/channels/1833491/fields/field1/last.txt?api_key=7D92ULX6128DMIYA')
+  .then((response) => response.json())
+  .then((data) => temp_live_data.innerHTML = ' '+data+' C');
+}
+
+function field2()
+{
+  fetch('https://api.thingspeak.com/channels/1833491/fields/field2/last.txt?api_key=7D92ULX6128DMIYA')
+  .then((response) => response.json())
+  .then((data) => hum_live_data.innerHTML = ' '+data+'%');
+}
+
+function field3()
+{
+  fetch('https://api.thingspeak.com/channels/1833491/fields/field3/last.txt?api_key=7D92ULX6128DMIYA')
+  .then((response) => response.json())
+  .then((data) => soil_live_data.innerHTML = ' '+data);
+}
+field1();
+field2();
+field3();
