@@ -48,13 +48,3 @@ function switchMode(){
 
   }
 }
-
-function temp_rs(value) {
-  document.getElementById('var-temp').innerHTML = value;
-}
-function soil_Moisture_rs(value) {
-  document.getElementById('var-soil-moisture').innerHTML = value;
-}
-function humidity_rs(value) {
-  document.getElementById('var-humidity').innerHTML = value;
-}

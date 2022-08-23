@@ -12,7 +12,6 @@ function field1()
   },2000);
 }
 
-
 function field2()
 {
   setInterval(function(){
