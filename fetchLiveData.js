@@ -9,7 +9,7 @@ function field1()
     fetch('https://api.thingspeak.com/channels/1833491/fields/field1/last.txt?api_key=7D92ULX6128DMIYA')
     .then((response) => response.json())
     .then((data) => temp_live_data.innerHTML = ' '+data+' C');
-  },2000);
+  },1000);
 }
 
 function field2()
@@ -18,7 +18,7 @@ function field2()
     fetch('https://api.thingspeak.com/channels/1833491/fields/field2/last.txt?api_key=7D92ULX6128DMIYA')
     .then((response) => response.json())
     .then((data) => hum_live_data.innerHTML = ' '+data+'%');
-  },2000);
+  },1000);
 
 }
 
@@ -28,7 +28,7 @@ function field3()
     fetch('https://api.thingspeak.com/channels/1833491/fields/field3/last.txt?api_key=7D92ULX6128DMIYA')
     .then((response) => response.json())
     .then((data) => soil_live_data.innerHTML = ' '+data);
-  },2000);
+  },1000);
 
 }
 
