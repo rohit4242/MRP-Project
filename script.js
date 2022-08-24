@@ -7,12 +7,12 @@ function startStop()
     if(btn.innerHTML === "Force Start"){
         btn.innerHTML = "Force Stop";
         status.innerHTML = "ON";
-        status.style = "color: #00cc99;";
+        status.style = "color:#009933";
     }
     else{
         btn.innerHTML = "Force Start";
         status.innerHTML = "OFF";
-        status.style = "color: red;";
+        status.style = "color: #ff0000";
     }
 }
 

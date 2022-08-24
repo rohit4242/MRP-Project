@@ -10,63 +10,68 @@
 </head>
 
 <body>
-  <div class="connection">
-    <p style="color: #00cc99">Connected</p>
+  <!-- header section -->
+  <div class="head-section">
+    <div class="status">Status: <span id="motor-status">OFF</span></div>
+    <div class="login">Login</div>
   </div>
+ 
   <!--card layout start-->
   <div class="container">
     <!-- live status bar section start -->
     <div class="row">
       <div class="card-01">
-        <h3 id="temp">Temprature:<img src="svg/temp-svg.svg" width="25px"><span id="temp_live_data">0 C</span></h3>
+        <h3 id="temp">Temprature <img src="svg/temp-svg.svg" width="25px">: <span id="temp_live_data">0 C</span></h3>
+        <select name="sensor" id="display-sensor">
+          <option value="s1">Average Value: 45 C</option>
+          <hr>
+          <option value="s1">sensor 1: 45 C</option>
+          <option value="s2">sensor 1: 45 C</option>
+          <option value="s3">sensor 1: 45 C</option>
+          <option value="s4">sensor 1: 45 C</option>
+      </select>
       </div>
       <div class="card-02">
-        <h3 id="soil-moisture">Soil Moisture:<img src="svg/soil.svg" width="25px"> <span id="soil_live_data">0</span></h3>
+        <h3 id="soil-moisture">Soil Moisture <img src="svg/soil.svg" width="25px">: <span id="soil_live_data">0</span></h3>
+        <select name="sensor" id="display-sensor">
+          <option value="s1">Average Value: 512</option>
+          <hr>
+          <option value="s1">sensor 1: 512</option>
+          <option value="s2">sensor 1: 512</option>
+          <option value="s3">sensor 1: 512</option>
+          <option value="s4">sensor 1: 512</option>
+      </select>
       </div>
       <div class="card-03">
-        <h3 id="humidity">Humidity:<img src="svg/rain.svg" width="25px"> <span id="hum_live_data">0%</span></h3>
-      </div>
-      <div class="card-04">
-        <h3 id="status">Status: <span id="motor-status">OFF</span></h3>
+        <h3 id="humidity">Humidity <img src="svg/rain.svg" width="25px">: <span id="hum_live_data">0%</span></h3>
+        <select name="sensor" id="display-sensor">
+          <option value="s1">Average Value: 45%</option>
+          <hr>
+          <option value="s1">sensor 1: 45%</option>
+          <option value="s2">sensor 1: 45%</option>
+          <option value="s3">sensor 1: 45%</option>
+          <option value="s4">sensor 1: 45%</option>
+      </select>
       </div>
     </div>
     <!-- live status bar section end-->
 
     <!-- manual mode section start-->
     <div class="row">
-      <div class="card-05">
-        <h3 class="force-start"id="start-stop" onclick="startStop()">Force Start</h3>
-        <hr>
-        <div class="change-crop">
-          <label id="change-crop-label">Change Crop:</label>
-          <select name="crop" id="select-crop">
-              <option value="volvo">Bhindo</option>
-              <option value="saab">Bajaro</option>
-              <option value="mercedes">Kapas</option>
-              <option value="audi">Mandvi</option>
-          </select>
-         </div>
-        <hr>
-        <h3 class="switch-mode"id="switch-mode" onclick="switchMode()">Switch To Manual Mode</h3>
-        <hr>
-        <h3 id="user-guide"><a href="interface.jpg" target="_blank">User Guide</a></h3>
-      </div>
-      <!-- manual mode section end-->
-      <div class="card-06" id="card-cp">
-        <h1 id="current-preset">Current Preset</h1>
-        <hr>
-        <h3 id="cp">Temprature : <span id="var-temp">35</span>
-          <span style="color:#00cc99">&#8451;</span>
-        </h3>
-        <Input class="range"id="range1" type="range" value="35" min="20" max="60" onChange="temp_rs(this.value),temp_threshold_value()" ontouchmove="temp_rs(this.value)" onmousemove="temp_rs(this.value)"></Input>
+      <div class="card-04" id="card-cp"><h3 class="force-start"id="start-stop" onclick="startStop()">Force Start</h3><hr>
+        <label class="set-crop-text">Set Crops</label>
+        <select name="crop"id="select-crop">
+          <option value="Genral">Genral</option>
+          <option value="Kapas">Kapas</option>
+          <option value="Bhindo">Bhindo</option>
+          <option value="Mandvi">Mandvi</option>
+        </select><hr>
+        <h3 id="cp">Temprature : <span id="var-temp">35</span><span style="color:#00cc99">&#8451;</span></h3>
+        <!-- <Input class="range"id="range1" type="range" value="35" min="20" max="60" onChange="temp_rs(this.value),temp_threshold_value()" ontouchmove="temp_rs(this.value)" onmousemove="temp_rs(this.value)"></Input> -->
         <h3 id="cp">Soil Moisture : <span id="var-soil-moisture">512</span></h3>
-        <Input class="range"id="range2" type="range" value="512" min="0" max="1023" onChange="soil_Moisture_rs(this.value),soil_Moisture_threshold_value()" ontouchmove="soil_Moisture_rs(this.value)" onmousemove="soil_Moisture_rs(this.value)"></Input>
-        <h3 id="cp">Humidity : <span id="var-humidity">45</span>
-          <span style="color:#00cc99">%</span>
-        </h3>
-        <Input class="range"id="range3" type="range" value="45" min="20" max="70" onChange="humidity_rs(this.value),humidity_threshold_value()" ontouchmove="humidity_rs(this.value)" onmousemove="humidity_rs(this.value)"></Input>
-        <h3 id="cp"></h3>
-        <h3 id="cp"></h3>
+        <!-- <Input class="range"id="range2" type="range" value="512" min="0" max="1023" onChange="soil_Moisture_rs(this.value),soil_Moisture_threshold_value()" ontouchmove="soil_Moisture_rs(this.value)" onmousemove="soil_Moisture_rs(this.value)"></Input> -->
+        <h3 id="cp">Humidity : <span id="var-humidity">45</span><span style="color:#00cc99">%</span></h3>
+        <!-- <Input class="range"id="range3" type="range" value="45" min="20" max="70" onChange="humidity_rs(this.value),humidity_threshold_value()" ontouchmove="humidity_rs(this.value)" onmousemove="humidity_rs(this.value)"></Input> -->
       </div>
     </div>
   </div>

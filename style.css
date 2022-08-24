@@ -6,6 +6,47 @@ body{
   font-family:sans-serif;
   font-size: 15px;
 }
+.head-section{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  justify-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin: 6px;
+}
+.status{
+  background: #00cc99;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color:  #ffffff;
+  font-family:sans-serif;
+  font-size: 15px;
+  padding-top: 6px;
+}
+
+.login{
+  background:#00cc99;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color:  #ffffff;
+  font-family:sans-serif;
+  font-size: 15px;
+  padding-top: 6px;
+}
+.login:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+.login:active{
+  opacity: 0.5;
+}
 
 .container{
   margin: 10px;
@@ -16,6 +57,17 @@ body{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  font-size: 12px;
+}
+#display-sensor{
+  width: 24px;
+  font-family:sans-serif;
+  font-size: 15px;
+  background-color:#00cc99;
+  color: white;
+  border: 1px solid rgb(37, 66, 52);
+  border-radius: 5px;
+  cursor: pointer;
 }
 /* ========live data status========= */
 .live-data{
@@ -23,7 +75,7 @@ body{
   position: relative;
   flex: 1;
   max-width: 220px;
-  height: 70px;
+  height: 40px;
   margin: 10px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -35,20 +87,15 @@ body{
 
 #temp{
   color:  #ffffff;
-  margin: 18px;
+  margin: 11px;
 }
 #soil-moisture{
   color:  #ffffff;
-  margin: 18px;
+  margin: 11px;
 }
 #humidity{
   color:  #ffffff;
-  margin: 18px;
-}
-#status{
-  color:  #ffffff;
-  margin: 25px;
-  padding-left: 30px;
+  margin: 11px;
 }
 /* =========mode settings========== */
 .force-start{
@@ -59,7 +106,6 @@ body{
   height: 40px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
   text-align: center;
   padding-top: 15px;
 }
@@ -91,26 +137,13 @@ body{
   opacity: 0.5;
 }
 
-.change-crop{
-  margin: 0;
-  color: white;
-  border: none;
-  height: 35px;
-  border-radius: 5px;
-  margin-top: 10px;
-  text-align: center;
-  padding-top: 5px;
-}
-.change-crop:hover{
-  opacity: 0.8;
-}
-.change-crop:active{
-  opacity: 0.5;
-}
-#change-crop-label{
+.set-crop-text{
   font-family:sans-serif;
   font-size: 17.55px;
   font-weight: bold;
+  color: white;
+  padding-left: 20px;
+  padding-right: 50px;
 }
 #select-crop{
   font-family:sans-serif;
@@ -120,6 +153,7 @@ body{
   border: 1px solid rgb(37, 66, 52);
   border-radius: 5px;
   cursor: pointer;
+  width: 100px;
 }
 
 #user-guide{
@@ -191,45 +225,40 @@ a:active{
   background: #29293d;
   position: relative;
   flex: 1;
-  max-width: 220px;
-  height: 70px;
-  margin: 10px;
+  display: flex;
+  height: 40px;
+  margin: 5px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   justify-items: center;
+  justify-content: center;
+  justify-content: space-between;
 }
 
 .card-02{
   background: #29293d;
   position: relative;
   flex: 1;
-  max-width: 220px;
-  height: 70px;
-  margin: 10px;
+  display: flex;
+  height: 40px;
+  margin: 5px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
 }
+
 .card-03{
   background: #29293d;
   position: relative;
   flex: 1;
-  max-width: 220px;
-  height: 70px;
-  margin: 10px;
+  display: flex;
+  height: 40px;
+  margin: 5px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
 }
 .card-04{
-  background: #29293d;
-  position: relative;
-  flex: 1;
-  max-width: 220px;
-  height: 70px;
-  margin: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-.card-05{
   background: #29293d;
   position: relative;
   flex: 1;
@@ -240,7 +269,7 @@ a:active{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.card-06{
+.card-05{
   background: #29293d;
   position: relative;
   flex: 1;
@@ -270,23 +299,18 @@ hr{
     flex: 100%;
     max-width: 150px;
   }
-  
+
   .card-03{
     flex: 100%;
     max-width: 150px;
   }
-    
-  .card-04{
-    flex: 100%;
-    max-width: 150px;
-  }
   
-  .card-05{
+  .card-04{
     flex: 100%;
     max-width: 250px;
   }
   
-  .card-06{
+  .card-05{
     flex: 100%;
     max-width: 250px;
   }
@@ -311,18 +335,16 @@ and (max-device-width : 480px) {
   flex: 100%;
   max-width: 320px;
 }
-
 .card-03{
   flex: 100%;
   max-width: 320px;
 }
-
-.card-05{
+.card-04{
   flex: 100%;
   max-width: 350px;
 }
 
-.card-06{
+.card-05{
   flex: 100%;
   max-width: 350px;
 }
@@ -355,13 +377,9 @@ body{
 }
 .card-04{
   flex: 100%;
-  max-width: 150px;
-}
-.card-05{
-  flex: 100%;
   max-width: 260px;
 }
-.card-06{
+.card-05{
   flex: 100%;
   max-width: 260px;
 }
@@ -380,28 +398,24 @@ body{
 }
 .card-01{
   flex: 100%;
-  max-width: 170px;
+  max-width: 180px;
 }
 
 .card-02{
   flex: 100%;
-  max-width: 170px;
+  max-width: 180px;
 }
 
 .card-03{
   flex: 100%;
-  max-width: 170px;
+  max-width: 180px;
 }
 .card-04{
-  flex: 100%;
-  max-width: 150px;
-}
-.card-05{
   flex: 100%;
   max-width: 350px;
 }
 
-.card-06{
+.card-05{
   flex: 100%;
   max-width: 350px;
 }
@@ -427,17 +441,13 @@ body{
   flex: 100%;
   max-width: 220px;
 }
-.card-04{
-  flex: 100%;
-  max-width: 220px;
-}
 
-.card-05{
+.card-04{
   flex: 100%;
   max-width: 480px;
 }
 
-.card-06{
+.card-05{
   flex: 100%;
   max-width: 480px;
 }

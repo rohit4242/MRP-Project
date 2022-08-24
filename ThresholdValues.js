@@ -19,6 +19,7 @@ function temp_threshold_value() {
   xhr.open("POST", url);
   xhr.send();
   console.log(temp_value.innerText);
+
 }
 
 function soil_Moisture_threshold_value() {
@@ -28,6 +29,7 @@ function soil_Moisture_threshold_value() {
   xhr.open("POST", url);
   xhr.send();
   console.log(soil_Moisture_value.innerText);
+ 
 }
 function humidity_threshold_value() {
   let xhr = new XMLHttpRequest();
