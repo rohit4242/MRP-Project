@@ -2,6 +2,7 @@
 let temp_live_data = document.getElementById("temp_live_data");
 let hum_live_data = document.getElementById("hum_live_data");
 let soil_live_data = document.getElementById("soil_live_data");
+let ttt3 = document.getElementById("temp_live_data1");
 
 function field1()
 {
