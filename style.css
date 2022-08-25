@@ -266,14 +266,17 @@ hr{
   #temp{
     margin-top: 10px;
     margin-left: 10px;
+    font-size: 14px;
   }
   #soil-moisture{
     margin-top: 10px;
     margin-left: 10px;
+    font-size: 14px;
   }
   #humidity{
     margin-top: 10px;
     margin-left: 10px;
+    font-size: 14px;
   }
   
   #var-temp{
@@ -287,6 +290,10 @@ hr{
   #var-humidity{
     margin-left: 66px;
     color: #03f0b5;
+  }
+  .set-crop-text{
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .card-01{
     flex: 100%;
