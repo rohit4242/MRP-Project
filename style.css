@@ -270,6 +270,19 @@ hr{
     color:  #ffffff;
     margin: 11px;
   }
+  
+#var-temp{
+  color: #03f0b5;
+  margin-left: 40px;
+}
+#var-soil-moisture{
+  margin-left: 35px;
+  color: #03f0b5;
+}
+#var-humidity{
+  margin-left: 66px;
+  color: #03f0b5;
+}
   #display-sensor{
     width: 20px;
     font-family:sans-serif;
@@ -286,7 +299,7 @@ hr{
     font-weight: bold;
     color: white;
     padding-left: 20px;
-    padding-right: 50px;
+    padding-right: 20px;
   }
   #select-crop{
     font-family:sans-serif;
@@ -308,31 +321,30 @@ hr{
     border-radius: 5px;
     cursor: pointer;
   }
-
   .card-01{
     flex: 100%;
-    max-width: 150px;
+    max-width: 230px;
     display: flex;
 
   }
   
   .card-02{
     flex: 100%;
-    max-width: 150px;
+    max-width: 230px;
     display: flex;
 
   }
 
   .card-03{
     flex: 100%;
-    max-width: 150px;
+    max-width: 230px;
     display: flex;
 
   }
   
   .card-04{
     flex: 100%;
-    max-width: 250px;
+    max-width: 230px;
   }
   
  }
