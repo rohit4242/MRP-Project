@@ -300,16 +300,7 @@ hr{
     cursor: pointer;
     width: 100px;
   }
-  #display-sensor{
-    width: 24px;
-    font-family:sans-serif;
-    font-size: 15px;
-    background-color:#00cc99;
-    color: white;
-    border: 1px solid rgb(37, 66, 52);
-    border-radius: 5px;
-    cursor: pointer;
-  }
+
   .card-01{
     flex: 100%;
     max-width: 230px;
@@ -373,16 +364,7 @@ and (max-device-width : 480px) {
   cursor: pointer;
   width: 100px;
 }
-#display-sensor{
-  width: 24px;
-  font-family:sans-serif;
-  font-size: 15px;
-  background-color:#00cc99;
-  color: white;
-  border: 1px solid rgb(37, 66, 52);
-  border-radius: 5px;
-  cursor: pointer;
-}
+
 .card-01{
   flex: 100%;
   max-width: 320px;
