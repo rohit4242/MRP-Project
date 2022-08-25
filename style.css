@@ -259,18 +259,6 @@ hr{
   @media only screen
   and (min-device-width : 150px) and (max-device-width : 300px){
   /* Styles */
-  #temp{
-    color:  #ffffff;
-    /* margin: 11px; */
-  }
-  #soil-moisture{
-    color:  #ffffff;
-    /* margin: 11px; */
-  }
-  #humidity{
-    color:  #ffffff;
-    /* margin: 11px; */
-  }
   
 #var-temp{
   color: #03f0b5;
@@ -356,18 +344,7 @@ hr{
 and (min-device-width : 300px)
 and (max-device-width : 480px) {
 /* Styles */
-#temp{
-  color:  #ffffff;
-  /* margin: 11px; */
-}
-#soil-moisture{
-  color:  #ffffff;
-  /* margin: 11px; */
-}
-#humidity{
-  color:  #ffffff;
-  /* margin: 11px; */
-}
+
 #display-sensor{
   width: 20px;
   font-family:sans-serif;
@@ -434,18 +411,7 @@ and (max-device-width : 480px) {
 /* Smartphones (landscape) ----------- */
 @media (min-width: 481px) and (max-width: 767px) {
 /* Styles */
-#temp{
-  color:  #ffffff;
-  margin: 11px;
-}
-#soil-moisture{
-  color:  #ffffff;
-  margin: 11px;
-}
-#humidity{
-  color:  #ffffff;
-  margin: 11px;
-}
+
 #display-sensor{
   width: 20px;
   font-family:sans-serif;
@@ -508,18 +474,7 @@ body{
 /* iPads (portrait and landscape) ----------- */
 @media (min-width: 768px) and (max-width: 1024px){
 /* Styles */
-#temp{
-  color:  #ffffff;
-  margin: 11px;
-}
-#soil-moisture{
-  color:  #ffffff;
-  margin: 11px;
-}
-#humidity{
-  color:  #ffffff;
-  margin: 11px;
-}
+
 #display-sensor{
   width: 20px;
   font-family:sans-serif;
@@ -577,18 +532,7 @@ body{
 /* Desktops and laptops ----------- */
 @media (min-width: 1025px) and (max-width: 1280px) {
 /* Styles */
-#temp{
-  color:  #ffffff;
-  margin: 11px;
-}
-#soil-moisture{
-  color:  #ffffff;
-  margin: 11px;
-}
-#humidity{
-  color:  #ffffff;
-  margin: 11px;
-}
+
 #display-sensor{
   width: 20px;
   font-family:sans-serif;
