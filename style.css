@@ -261,15 +261,15 @@ hr{
   /* Styles */
   #temp{
     color:  #ffffff;
-    margin: 11px;
+    /* margin: 11px; */
   }
   #soil-moisture{
     color:  #ffffff;
-    margin: 11px;
+    /* margin: 11px; */
   }
   #humidity{
     color:  #ffffff;
-    margin: 11px;
+    /* margin: 11px; */
   }
   
 #var-temp{
@@ -358,15 +358,15 @@ and (max-device-width : 480px) {
 /* Styles */
 #temp{
   color:  #ffffff;
-  margin: 11px;
+  /* margin: 11px; */
 }
 #soil-moisture{
   color:  #ffffff;
-  margin: 11px;
+  /* margin: 11px; */
 }
 #humidity{
   color:  #ffffff;
-  margin: 11px;
+  /* margin: 11px; */
 }
 #display-sensor{
   width: 20px;
