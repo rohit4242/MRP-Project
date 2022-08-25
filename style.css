@@ -266,17 +266,17 @@ hr{
   #temp{
     margin-top: 10px;
     margin-left: 10px;
-    font-size: 14px;
+/*     font-size: 14px; */
   }
   #soil-moisture{
     margin-top: 10px;
     margin-left: 10px;
-    font-size: 14px;
+/*     font-size: 14px; */
   }
   #humidity{
     margin-top: 10px;
     margin-left: 10px;
-    font-size: 14px;
+/*     font-size: 14px; */
   }
   
   #var-temp{
