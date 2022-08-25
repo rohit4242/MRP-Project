@@ -87,15 +87,19 @@ body{
 
 #temp{
   color:  #ffffff;
-  margin: 11px;
+  /* margin: 11px; */
+  margin-top: 11px;
+  margin-left: 11px;
 }
 #soil-moisture{
   color:  #ffffff;
-  margin: 11px;
+  margin-top: 11px;
+  margin-left: 11px;
 }
 #humidity{
   color:  #ffffff;
-  margin: 11px;
+  margin-top: 11px;
+  margin-left: 11px;
 }
 /* =========mode settings========== */
 .force-start{
