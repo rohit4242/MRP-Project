@@ -60,7 +60,7 @@ body{
   font-size: 12px;
 }
 #display-sensor{
-  width: 24px;
+  width: 20px;
   font-family:sans-serif;
   font-size: 15px;
   background-color:#00cc99;
@@ -249,6 +249,7 @@ a:active{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+
 hr{
   height: 1px;
   background-color: #3d3d5c;
@@ -258,13 +259,48 @@ hr{
   @media only screen
   and (min-device-width : 150px) and (max-device-width : 300px){
   /* Styles */
+  #temp{
+    color:  #ffffff;
+    margin: 11px;
+  }
+  #soil-moisture{
+    color:  #ffffff;
+    margin: 11px;
+  }
+  #humidity{
+    color:  #ffffff;
+    margin: 11px;
+  }
+  
+#var-temp{
+  color: #03f0b5;
+  margin-left: 40px;
+}
+#var-soil-moisture{
+  margin-left: 35px;
+  color: #03f0b5;
+}
+#var-humidity{
+  margin-left: 66px;
+  color: #03f0b5;
+}
+  #display-sensor{
+    width: 20px;
+    font-family:sans-serif;
+    font-size: 15px;
+    background-color:#00cc99;
+    color: white;
+    border: 1px solid rgb(37, 66, 52);
+    border-radius: 5px;
+    cursor: pointer;
+  }
   .set-crop-text{
     font-family:sans-serif;
     font-size: 17.55px;
     font-weight: bold;
     color: white;
     padding-left: 20px;
-    padding-right: 50px;
+    padding-right: 20px;
   }
   #select-crop{
     font-family:sans-serif;
@@ -286,31 +322,30 @@ hr{
     border-radius: 5px;
     cursor: pointer;
   }
-
   .card-01{
     flex: 100%;
-    max-width: 150px;
+    max-width: 230px;
     display: flex;
 
   }
   
   .card-02{
     flex: 100%;
-    max-width: 150px;
+    max-width: 230px;
     display: flex;
 
   }
 
   .card-03{
     flex: 100%;
-    max-width: 150px;
+    max-width: 230px;
     display: flex;
 
   }
   
   .card-04{
     flex: 100%;
-    max-width: 250px;
+    max-width: 230px;
   }
   
  }
@@ -321,6 +356,28 @@ hr{
 and (min-device-width : 300px)
 and (max-device-width : 480px) {
 /* Styles */
+#temp{
+  color:  #ffffff;
+  margin: 11px;
+}
+#soil-moisture{
+  color:  #ffffff;
+  margin: 11px;
+}
+#humidity{
+  color:  #ffffff;
+  margin: 11px;
+}
+#display-sensor{
+  width: 20px;
+  font-family:sans-serif;
+  font-size: 15px;
+  background-color:#00cc99;
+  color: white;
+  border: 1px solid rgb(37, 66, 52);
+  border-radius: 5px;
+  cursor: pointer;
+}
 .set-crop-text{
   font-family:sans-serif;
   font-size: 17.55px;
@@ -377,6 +434,28 @@ and (max-device-width : 480px) {
 /* Smartphones (landscape) ----------- */
 @media (min-width: 481px) and (max-width: 767px) {
 /* Styles */
+#temp{
+  color:  #ffffff;
+  margin: 11px;
+}
+#soil-moisture{
+  color:  #ffffff;
+  margin: 11px;
+}
+#humidity{
+  color:  #ffffff;
+  margin: 11px;
+}
+#display-sensor{
+  width: 20px;
+  font-family:sans-serif;
+  font-size: 15px;
+  background-color:#00cc99;
+  color: white;
+  border: 1px solid rgb(37, 66, 52);
+  border-radius: 5px;
+  cursor: pointer;
+}
 .set-crop-text{
   font-family:sans-serif;
   font-size: 17.55px;
@@ -401,27 +480,27 @@ body{
 
 .card-01{
   flex: 100%;
-  max-width: 150px;
+  max-width: 185px;
   display: flex;
 
 }
 
 .card-02{
   flex: 100%;
-  max-width: 150px;
+  max-width: 185px;
   display: flex;
 
 }
 
 .card-03{
   flex: 100%;
-  max-width: 150px;
+  max-width: 185px;
   display: flex;
 
 }
 .card-04{
   flex: 100%;
-  max-width: 260px;
+  max-width: 320px;
 }
 
 }
@@ -429,24 +508,64 @@ body{
 /* iPads (portrait and landscape) ----------- */
 @media (min-width: 768px) and (max-width: 1024px){
 /* Styles */
+#temp{
+  color:  #ffffff;
+  margin: 11px;
+}
+#soil-moisture{
+  color:  #ffffff;
+  margin: 11px;
+}
+#humidity{
+  color:  #ffffff;
+  margin: 11px;
+}
+#display-sensor{
+  width: 20px;
+  font-family:sans-serif;
+  font-size: 15px;
+  background-color:#00cc99;
+  color: white;
+  border: 1px solid rgb(37, 66, 52);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.set-crop-text{
+  font-family:sans-serif;
+  font-size: 17.55px;
+  font-weight: bold;
+  color: white;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+#select-crop{
+  font-family:sans-serif;
+  font-size: 17.55px;
+  background-color:#00cc99;
+  color: white;
+  border: 1px solid rgb(37, 66, 52);
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
 body{
   font-size:10px;
 }
 .card-01{
   flex: 100%;
-  max-width: 180px;
+  max-width: 190px;
   display: flex;
 
 }
 
 .card-02{
   flex: 100%;
-  max-width: 180px;
+  max-width: 190px;
 }
 
 .card-03{
   flex: 100%;
-  max-width: 180px;
+  max-width: 190px;
 }
 .card-04{
   flex: 100%;
@@ -458,6 +577,46 @@ body{
 /* Desktops and laptops ----------- */
 @media (min-width: 1025px) and (max-width: 1280px) {
 /* Styles */
+#temp{
+  color:  #ffffff;
+  margin: 11px;
+}
+#soil-moisture{
+  color:  #ffffff;
+  margin: 11px;
+}
+#humidity{
+  color:  #ffffff;
+  margin: 11px;
+}
+#display-sensor{
+  width: 20px;
+  font-family:sans-serif;
+  font-size: 15px;
+  background-color:#00cc99;
+  color: white;
+  border: 1px solid rgb(37, 66, 52);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.set-crop-text{
+  font-family:sans-serif;
+  font-size: 17.55px;
+  font-weight: bold;
+  color: white;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+#select-crop{
+  font-family:sans-serif;
+  font-size: 17.55px;
+  background-color:#00cc99;
+  color: white;
+  border: 1px solid rgb(37, 66, 52);
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
 .card-01{
   flex: 100%;
   max-width: 220px;
