@@ -256,7 +256,7 @@ hr{
   }
 
   @media only screen
-  and (min-device-width : 200px) and (max-device-width : 300px){
+  and (min-device-width : 150px) and (max-device-width : 300px){
   /* Styles */
   .set-crop-text{
     font-family:sans-serif;
