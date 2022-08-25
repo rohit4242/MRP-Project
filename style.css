@@ -4,7 +4,7 @@ body{
   height: 200vh;
   background-color:#1f1f2e;
   font-family:sans-serif;
-  /* font-size: 15px; */
+  font-size: 15px;
 }
 .head-section{
   display: flex;
@@ -87,19 +87,24 @@ body{
 
 #temp{
   color:  #ffffff;
-  /* margin: 11px; */
-  margin-top: 11px;
-  margin-left: 11px;
+  /* margin-top: 11px;
+  margin-left: 11px; */
+  margin: 11px;
+  font-size: 15px;
 }
 #soil-moisture{
   color:  #ffffff;
-  margin-top: 11px;
-  margin-left: 11px;
+  /* margin-top: 11px;
+  margin-left: 11px; */
+  margin: 11px;
+  font-size: 15px;
 }
 #humidity{
   color:  #ffffff;
   margin-top: 11px;
   margin-left: 11px;
+  margin: 11px;
+  font-size: 15px;
 }
 /* =========mode settings========== */
 .force-start{
