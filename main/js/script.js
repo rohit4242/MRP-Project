@@ -45,6 +45,12 @@ function switchMode(){
     range3.style.display = 'block';
     cp.style.paddingTop = '0';
 
-
   }
 }
+
+let login = document.getElementById("login-btn");
+
+login.addEventListener('click',function(e){
+
+  location.replace('login.html');
+});

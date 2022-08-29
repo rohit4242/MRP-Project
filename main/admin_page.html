@@ -5,19 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MRP Project</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Admin Page</title>
+  <link rel="stylesheet" href="css/admin_page.css">
 </head>
 
 <body>
   <!-- header section -->
   <div class="head-section">
     <div class="status">Status: <span id="motor-status">OFF</span></div>
-    <div class="login">Login</div>
+    <div class="login" id="login-btn">Logout</div>
   </div>
  
   <!--card layout start-->
   <div class="container">
+    <h1>Welcome To Admin Page</h1>
     <!-- live status bar section start -->
     <div class="row">
       <div class="card-01"><span  id="temp">Temperature<img src="svg/temp-svg.svg" width="25px">: <span id="temp_live_data">0 C</span></span>
@@ -56,29 +57,33 @@
     <!-- manual mode section start-->
     <div class="row">
       <div class="card-04" id="card-cp"><h3 class="force-start"id="start-stop" onclick="startStop()">Force Start</h3><hr>
-        <label class="set-crop-text">Set Crops</label>
-        <select name="crop"id="select-crop" onchange="display_crops()">
-          <option value="General">General</option>
-          <option value="Cotton">Cotton</option>
-          <option value="Ground Nut">Ground Nut</option>
-          <option value="Pearl Millet">Pearl Millet</option>
-        </select><hr>
+        <div class="add-crops">
+            <label class="set-crop-text">Set Crops</label>
+            <select name="crop"id="select-crop" onchange="display_crops()">
+              <option value="General">General</option>
+              <option value="Cotton">Cotton</option>
+              <option value="Ground Nut">Ground Nut</option>
+              <option value="Pearl Millet">Pearl Millet</option>
+            </select>
+            <input type="text" class="text-crops input-field" placeholder="Add New Crops">
+        </div>
+        <hr>
         <h3 id="cp">Temperature : <span id="var-temp">35</span><span style="color:#00cc99">&#8451;</span></h3>
-        <!-- <Input class="range"id="range1" type="range" value="35" min="20" max="60" onChange="temp_rs(this.value),temp_threshold_value()" ontouchmove="temp_rs(this.value)" onmousemove="temp_rs(this.value)"></Input> -->
+        <Input class="range"id="range1" type="range" value="35" min="20" max="60" onChange="temp_rs(this.value),temp_threshold_value()" ontouchmove="temp_rs(this.value)" onmousemove="temp_rs(this.value)"></Input>
         <h3 id="cp">Soil Moisture : <span id="var-soil-moisture">512</span></h3>
-        <!-- <Input class="range"id="range2" type="range" value="512" min="0" max="1023" onChange="soil_Moisture_rs(this.value),soil_Moisture_threshold_value()" ontouchmove="soil_Moisture_rs(this.value)" onmousemove="soil_Moisture_rs(this.value)"></Input> -->
+        <Input class="range"id="range2" type="range" value="512" min="0" max="1023" onChange="soil_Moisture_rs(this.value),soil_Moisture_threshold_value()" ontouchmove="soil_Moisture_rs(this.value)" onmousemove="soil_Moisture_rs(this.value)"></Input>
         <h3 id="cp">Humidity : <span id="var-humidity">45</span><span style="color:#00cc99">%</span></h3>
-        <!-- <Input class="range"id="range3" type="range" value="45" min="20" max="70" onChange="humidity_rs(this.value),humidity_threshold_value()" ontouchmove="humidity_rs(this.value)" onmousemove="humidity_rs(this.value)"></Input> -->
+        <Input class="range"id="range3" type="range" value="45" min="20" max="70" onChange="humidity_rs(this.value),humidity_threshold_value()" ontouchmove="humidity_rs(this.value)" onmousemove="humidity_rs(this.value)"></Input>
       </div>
     </div>
   </div>
   <!--card layout end-->
-  <script src="script.js"></script>
-  <script src="chart.js"></script>
+  <script src="js/admin_page.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/chart.js"></script>
   <!-- <script src="custom.js"></script> -->
-  <script src="fetchLiveData.js"></script>
-  <!-- <script src="ThresholdValues.js"></script> -->
-  <script src="displayCrops.js"></script>
+  <script src="js/fetchLiveData.js"></script>
+  <script src="js/displayCrops.js"></script>
 </body>
 
 </html>
