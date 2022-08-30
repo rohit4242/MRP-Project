@@ -59,11 +59,11 @@
       <div class="card-04" id="card-cp"><h3 class="force-start"id="start-stop" onclick="startStop()">Force Start</h3><hr>
         <div class="add-crops">
             <label class="set-crop-text">Set Crops</label>
-            <select name="crop"id="select-crop" onchange="display_crops()">
-              <option value="General">General</option>
+            <select id="select-crop">
+              <!-- <option value="General">General</option>
               <option value="Cotton">Cotton</option>
               <option value="Ground Nut">Ground Nut</option>
-              <option value="Pearl Millet">Pearl Millet</option>
+              <option value="Pearl Millet">Pearl Millet</option> -->
             </select>
             <input type="text" class="text-crops input-field" placeholder="Add New Crops">
         </div>
@@ -83,7 +83,7 @@
   <script src="js/chart.js"></script>
   <!-- <script src="custom.js"></script> -->
   <script src="js/fetchLiveData.js"></script>
-  <script src="js/displayCrops.js"></script>
+  <script type="module" src="js/displayCrops.js"></script>
 </body>
 
 </html>
