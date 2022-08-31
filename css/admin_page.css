@@ -64,7 +64,7 @@ h1{
     opacity: 0.5;
 }
 
-.container {
+.container1 {
     margin: 10px;
 }
 
@@ -171,13 +171,23 @@ h1{
 }
 
 /* ==========add new crops========== */
+.add-crops {
+    display: flex;
+    width: inherit;
+    justify-content: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
 
+.text-crops {
+    height: inherit;
+}
 
 .add-update-btn{
     display: flex;
     justify-content: center;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -192,6 +202,12 @@ button{
     text-align: center;
     font-family: sans-serif;
     font-size: 17.55px;
+}
+button:hover{
+    opacity: 0.8;
+}
+button:active{
+    opacity: 0.5;
 }
 /* ==========current presets========== */
 
@@ -299,17 +315,33 @@ hr {
     border: none;
 }
 
+/* ====================model=========================== */
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    max-width:inherit; /* For Bootstrap 4 - to avoid the modal window stretching full width */
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+}
+
+/* ====================model=========================== */
+
 @media only screen and (min-device-width : 150px) and (max-device-width : 330px) {
-
-    /* Styles */
-    .add-crops {
-        display: flex;
-        width: inherit;
-    }
-
-    .text-crops {
-        height: inherit;
-    }
 
     #temp {
         margin-top: 10px;
@@ -386,14 +418,6 @@ hr {
 @media only screen and (min-device-width : 300px) and (max-device-width : 480px) {
 
     /* Styles */
-    .add-crops {
-        display: flex;
-        width: inherit;
-    }
-
-    .text-crops {
-        height: inherit;
-    }
 
     .range {
         width: 250px;
