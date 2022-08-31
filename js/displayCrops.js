@@ -114,12 +114,12 @@ function GetAllDataRealtime(){
             crops.push(childSnapshot.val());
             console.log(crops);
             crops.forEach((c) =>{
-                console.log(c[0].name[1]);
-                if(c[0].name == "general"){
-                    var_temp.innerHTML = c[0].temp;
-                    var_soil.innerHTML = c[0].soil;
-                    var_hum.innerHTML = c[0].hum;
+                select_crops.onclick = (event) =>{
+                    event.preventDefault();
+                    let index = select_crops.selectedIndex;
+                    console.log(index);
                 }
+                
             })
           // ...
         });
