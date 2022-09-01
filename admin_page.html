@@ -78,11 +78,27 @@
         <h3 id="cp">Humidity : <span id="var-humidity">45</span><span style="color:#00cc99">%</span></h3>
         <!-- <Input class="range"id="range3" type="range" value="45" min="20" max="70" onChange="humidity_rs(this.value),humidity_threshold_value()" ontouchmove="humidity_rs(this.value)" onmousemove="humidity_rs(this.value)"></Input> -->
         <div class="add-update-btn">
-          <button onclick="lunchModal()">Add New</button>
-          <button onclick="lunchModal()">Update</button>
+          <button onclick="myFunction()" id="controls">Add New</button>
+          <button onclick="showControl()">Update</button>
         </div>
       </div>
-
+    </div>
+    <div class="modal-content" id="control">
+      <form class="modal-body" id="modal_body">
+        <label class="labs">Name: </label>
+        <input type="text" id="Name"><br>
+        <label class="labs">Temp: </label>
+        <input type="text" id="temprature"><br>
+        <label class="labs">Humidity: </label>
+        <input type="text" id="hum"><br>
+        <label class="labs">Soil Moisture: </label>
+        <input type="text" id="soil"><br>
+      </form>
+      <div class="modal-footer">
+        <button id="demo">Add New</button>
+        <button onclick="Update()">Update</button>
+        <button onclick="Delete()">Delete</button>
+      </div>
     </div>
   </div>
 

@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
-import { getDatabase, ref,onValue} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
+import { getDatabase, ref,onValue,push,set,update} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDCuiG5lLgqhBZrmn4gJgA6ULGCiV4n8_g",
@@ -36,7 +36,7 @@ function AddAllItemToSelection(crops){
     crops.forEach(element => {
         AddNewOption(element.name);
         // console.log(element.name);
-    });
+    })
 }
 
 function GetAllDataRealtime(){
@@ -55,3 +55,59 @@ function GetAllDataRealtime(){
 }
 
 window.onload = GetAllDataRealtime();
+
+select_crops.onchange = function(){
+    let sleectedvalue = this.value;
+    console.log(sleectedvalue);
+}
+let z = document.getElementById('controls');
+z.addEventListener('click',(e)=>{
+    var x = document.getElementById('control');
+    if (x.style.display === 'none') {
+      x.style.display = 'block';
+    } else {
+      x.style.display = 'none';
+    }
+});
+   
+let addbtn = document.getElementById('demo');
+addbtn.addEventListener('click',(e)=> {
+
+    console.log('hello');
+    let name = document.getElementById('Name').value;
+    let temp = document.getElementById('temprature').value;
+    let hum = document.getElementById('hum').value;
+    let soil = document.getElementById('soil').value;
+
+    if(validate_field(name,temp,hum,soil) == true){
+        alert('Please Fill the all inputs');
+        return
+    }
+    const reference = ref(db, 'crops/'+name);
+    set(reference, {
+        name: name,
+        temp: temp,
+        hum: hum,
+        soil:soil
+    });
+    alert('Your Crop is Added');
+    let rm = document.getElementById('modal_body');
+    rm.reset();
+});
+
+
+function validate_field(f1,f2,f3,f4){
+    if(f1 == null){
+        return false;
+    }
+    if(f2 == null){
+        return false;
+    }
+    if(f3 == null){
+        return false;
+    }
+    if(f4 == null){
+        return false;
+    }
+}
+
