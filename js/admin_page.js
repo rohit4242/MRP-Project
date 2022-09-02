@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
-import { getDatabase, ref, onValue, push, set, update } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
+import { getDatabase, ref, onValue, push, set, update,remove} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDCuiG5lLgqhBZrmn4gJgA6ULGCiV4n8_g",
@@ -22,7 +22,9 @@ let temp = document.getElementById('temprature');
 let hum = document.getElementById('hum');
 let soil = document.getElementById('soil');
 // let select_tag = document.getElementById('select-crop');
-let update_btn = document.getElementById('update');
+let editValue = document.getElementById('edit_value');
+let updateOnDatabase = document.getElementById('update_btn');
+let DeleteOnDatabase = document.getElementById('delete_btn');
 
 
 let z = document.getElementById('controls');
@@ -50,7 +52,8 @@ addbtn.addEventListener('click', (e) => {
   let rm = document.getElementById('modal_body');
   rm.reset();
 });
-update_btn.addEventListener('click', (e) => {
+editValue.addEventListener('click', (e) => {
+
   let var_temp = document.getElementById('var-temp');
   let var_soil = document.getElementById('var-soil-moisture');
   let var_hum = document.getElementById('var-humidity');
@@ -66,3 +69,27 @@ function printValueOnInput(name1, temp1, hum1, soil1) {
   hum.value = hum1;
   soil.value = soil1;
 }
+
+updateOnDatabase.addEventListener('click',(e) =>{
+  const reference = ref(db, 'crops/' + name.value);
+  update(reference, {
+    name: name.value,
+    temp: temp.value,
+    hum: hum.value,
+    soil: soil.value
+  });
+  alert('Your Crop is Updated');
+  let rm = document.getElementById('modal_body');
+  rm.reset();
+});
+
+DeleteOnDatabase.addEventListener('click',(et) =>{
+  console.log('clicked');
+  const reference = ref(db, 'crops/' + name.value);
+  remove(reference,null);
+  alert('Your Crop is Deleted');
+  let rm = document.getElementById('modal_body');
+  rm.reset();
+  console.log('clicked 1');
+
+});
