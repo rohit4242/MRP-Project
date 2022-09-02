@@ -78,37 +78,38 @@
         <h3 id="cp">Humidity : <span id="var-humidity">45</span><span style="color:#00cc99">%</span></h3>
         <!-- <Input class="range"id="range3" type="range" value="45" min="20" max="70" onChange="humidity_rs(this.value),humidity_threshold_value()" ontouchmove="humidity_rs(this.value)" onmousemove="humidity_rs(this.value)"></Input> -->
         <div class="add-update-btn">
-          <button onclick="myFunction()" id="controls">Add New</button>
-          <button onclick="showControl()">Update</button>
+          <button id="controls">Add New</button>
+          <button id="update">Update</button>
         </div>
       </div>
     </div>
     <div class="modal-content" id="control">
       <form class="modal-body" id="modal_body">
         <label class="labs">Name: </label>
-        <input type="text" id="Name" placeholder="Enter Crops Name"><br>
+        <input type="text" value="" id="Name" placeholder="Enter Crops Name"><br>
         <label class="labs">Temp: </label>
-        <input type="text" id="temprature"  placeholder="Temperature"><br>
+        <input type="text" value="" id="temprature"  placeholder="Temperature"><br>
         <label class="labs">Humidity: </label>
-        <input type="text" id="hum"  placeholder="Humidity"><br>
+        <input type="text" value="" id="hum"  placeholder="Humidity"><br>
         <label class="labs">Soil Moisture: </label>
-        <input type="text" id="soil"  placeholder="Soil Moisture"><br>
+        <input type="text" value="" id="soil"  placeholder="Soil Moisture"><br>
       </form>
       <div class="modal-footer">
-        <button id="demo">Add New</button>
-        <button onclick="Update()">Update</button>
+        <button id="addNew">Add New</button>
+        <button id="update">Update</button>
         <button onclick="Delete()">Delete</button>
       </div>
     </div>
   </div>
 
   <!--card layout end-->
-  <script type="module" src="js/admin_page.js"></script>
   <script src="js/script.js"></script>
   <script src="js/chart.js"></script>
   <!-- <script src="custom.js"></script> -->
   <script type="module" src="js/fetchLiveData.js"></script>
   <script type="module" src="js/displayCrops.js"></script>
+  <script type="module" src="js/admin_page.js"></script>
+
 </body>
 
 </html>

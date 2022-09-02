@@ -51,7 +51,6 @@
   font-weight: 500;
 }
 
-
 .modal-body {
   position: relative;
   flex: 1 1 auto;
@@ -73,6 +72,7 @@
 
 button{
   width: 100px;
+  margin-top: 10px;
 }
 .labs{
     display: inline-block;
@@ -80,4 +80,62 @@ button{
     font-size: 1rem;
     color: white;
     margin: 5px 0;
+}
+
+@media only screen
+and (min-device-width : 150px) and (max-device-width : 300px){
+/* Styles */
+.modal-content input{
+  width: 200px;
+}
+.modal-content{
+  max-width: 230px;
+}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 300px)
+and (max-device-width : 480px) {
+/* Styles */
+.modal-content input{
+  width: 200px;
+}
+.modal-content{
+  width: 100%;
+}
+}
+
+/* Smartphones (landscape) ----------- */
+@media (min-width: 481px) and (max-width: 767px) {
+/* Styles */
+.modal-content input{
+  width: 200px;
+}
+.modal-content{
+  width: 100%;
+}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media (min-width: 768px) and (max-width: 1024px){
+/* Styles */
+.modal-content input{
+  width: 200px;
+}
+.modal-content{
+  width: 100%;
+}
+
+}
+
+/* Desktops and laptops ----------- */
+@media (min-width: 1025px) and (max-width: 1280px) {
+/* Styles */
+.modal-content input{
+  width: 200px;
+}
+.modal-content{
+  width: 100%;
+}
 }
