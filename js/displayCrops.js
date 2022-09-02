@@ -17,7 +17,6 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 
-
 let var_temp = document.getElementById('var-temp');
 let var_soil = document.getElementById('var-soil-moisture');
 let var_hum  = document.getElementById('var-humidity');
@@ -57,57 +56,18 @@ function GetAllDataRealtime(){
 window.onload = GetAllDataRealtime();
 
 select_crops.onchange = function(){
-    let sleectedvalue = this.value;
-    console.log(sleectedvalue);
-}
-let z = document.getElementById('controls');
-z.addEventListener('click',(e)=>{
-    var x = document.getElementById('control');
-    if (x.style.display === 'none') {
-      x.style.display = 'block';
-    } else {
-      x.style.display = 'none';
-    }
+    let selectedvalue = this.value;
+    console.log(selectedvalue);
+    const starCountRef = ref(db, 'crops/' + selectedvalue);
+    onValue(starCountRef, (snapshot) => {
+    const data = snapshot.val();
+    console.log(data);
+    printValue(data.temp,data.hum,data.soil);
 });
-   
-let addbtn = document.getElementById('demo');
-addbtn.addEventListener('click',(e)=> {
-
-    console.log('hello');
-    let name = document.getElementById('Name').value;
-    let temp = document.getElementById('temprature').value;
-    let hum = document.getElementById('hum').value;
-    let soil = document.getElementById('soil').value;
-
-    if(validate_field(name,temp,hum,soil) == true){
-        alert('Please Fill the all inputs');
-        return
-    }
-    const reference = ref(db, 'crops/'+name);
-    set(reference, {
-        name: name,
-        temp: temp,
-        hum: hum,
-        soil:soil
-    });
-    alert('Your Crop is Added');
-    let rm = document.getElementById('modal_body');
-    rm.reset();
-});
-
-
-function validate_field(f1,f2,f3,f4){
-    if(f1 == null){
-        return false;
-    }
-    if(f2 == null){
-        return false;
-    }
-    if(f3 == null){
-        return false;
-    }
-    if(f4 == null){
-        return false;
-    }
 }
 
+function printValue(temp,hum,soil){
+    var_temp.innerText = temp;
+    var_hum.innerText = hum;
+    var_soil.innerText = soil;
+}

@@ -36,6 +36,20 @@
   color: white;
 
 }
+.modal-content input{
+  background-color: #00cc99;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: inherit;
+  color: white;
+  line-height: 1;
+}
+
+.modal-content input::placeholder {
+  color: white;
+  font-weight: 500;
+}
 
 
 .modal-body {
