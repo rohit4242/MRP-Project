@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
-import { getDatabase, ref, onValue, push, set, update,remove} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
+import { getDatabase, ref,set, update,remove} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDCuiG5lLgqhBZrmn4gJgA6ULGCiV4n8_g",
@@ -39,7 +39,9 @@ z.addEventListener('click', (e) => {
 
 let addbtn = document.getElementById('addNew');
 addbtn.addEventListener('click', (e) => {
-
+  if(validation() == false){
+    return false;
+  }
   console.log('hello');
   const reference = ref(db, 'crops/' + name.value);
   set(reference, {
@@ -71,6 +73,9 @@ function printValueOnInput(name1, temp1, hum1, soil1) {
 }
 
 updateOnDatabase.addEventListener('click',(e) =>{
+  if(validation() == false){
+    return false;
+  }
   const reference = ref(db, 'crops/' + name.value);
   update(reference, {
     name: name.value,
@@ -84,6 +89,9 @@ updateOnDatabase.addEventListener('click',(e) =>{
 });
 
 DeleteOnDatabase.addEventListener('click',(et) =>{
+  if(validation() == false){
+    return false;
+  }
   console.log('clicked');
   const reference = ref(db, 'crops/' + name.value);
   remove(reference,null);
@@ -93,3 +101,10 @@ DeleteOnDatabase.addEventListener('click',(et) =>{
   console.log('clicked 1');
 
 });
+
+function validation(){
+  if(name.value == "" || temp.value=="" || hum.value=="" || soil.value==""){
+    alert("Please Fill all The Inputs");
+    return false;
+  }
+}
