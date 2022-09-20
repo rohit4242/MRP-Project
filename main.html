@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MRP Project</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/set_timer.css">
 </head>
 
 <body>
@@ -68,10 +69,35 @@
         <!-- <Input class="range"id="range3" type="range" value="45" min="20" max="70" onChange="humidity_rs(this.value),humidity_threshold_value()" ontouchmove="humidity_rs(this.value)" onmousemove="humidity_rs(this.value)"></Input> -->
       </div>
     </div>
+
+    <div class="row">
+      <div class="wrapper">
+        <h1 id="current_time">00:00:00 PM</h1>
+        <div class="content">
+          <div class="column">
+            <select class="select_time">
+              <option value="Hour" selected disabled hidden>Hour</option>
+            </select>
+          </div>
+          <div class="column">
+            <select class="select_time">
+              <option value="Minute" selected disabled hidden>Minute</option>
+            </select>
+          </div>
+          <div class="column">
+            <select class="select_time">
+              <option value="AM/PM" selected disabled hidden>AM/PM</option>
+            </select>
+          </div>
+        </div>
+        <button>Set Alarm</button>
+      </div>
+    </div>
   </div>
   <!--card layout end-->
   <script src="js/script.js"></script>
   <script src="js/fetchLiveData.js"></script>
+  <script src="js/set_timer.js"></script>
   <script type="module" src="js/displayCrops.js"></script>
 </body>
 
