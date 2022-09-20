@@ -24,7 +24,7 @@ for (let i = 2; i > 0; i--) {
     selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option);
 }
 
-setInterval(() => {
+let inserval = setInterval(() => {
     let date = new Date(),
     h = date.getHours(),
     m = date.getMinutes(),
@@ -43,6 +43,9 @@ setInterval(() => {
     if (alarmTime === `${h}:${m} ${ampm}`) {
         ringtone.play();
         ringtone.loop = true;
+        let status = document.getElementById('motor-status');
+        status.innerHTML = "ON";
+        status.style = "color:#009933";
     }
 });
 
@@ -51,18 +54,23 @@ function setAlarm() {
         alarmTime = "";
         ringtone.pause();
         content.classList.remove("disable");
-        setAlarmBtn.innerText = "Set Alarm";
+        setAlarmBtn.innerText = "Set Timer";
+        let status = document.getElementById('motor-status');
+        status.innerHTML = "OFF";
+        status.style = "color:#ff0000";
         return isAlarmSet = false;
+
     }
 
     let time = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}`;
     if (time.includes("Hour") || time.includes("Minute") || time.includes("AM/PM")) {
-        return alert("Please, select a valid time to set Alarm!");
+        return alert("Please, select a valid time to set Timer!");
     }
     alarmTime = time;
     isAlarmSet = true;
     content.classList.add("disable");
-    setAlarmBtn.innerText = "Clear Alarm";
+    setAlarmBtn.innerText = "Clear Timer";
+    
 }
 
 setAlarmBtn.addEventListener("click", setAlarm);

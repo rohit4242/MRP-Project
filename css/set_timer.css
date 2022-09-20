@@ -84,7 +84,9 @@ and (max-device-width : 480px) {
 /* Smartphones (landscape) ----------- */
 @media (min-width: 481px) and (max-width: 767px) {
 /* Styles */
-
+.wrapper{
+  width: 260px;
+}
 }
 
 /* iPads (portrait and landscape) ----------- */
