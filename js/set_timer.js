@@ -3,8 +3,7 @@ content = document.querySelector(".content"),
 selectMenu = document.getElementsByClassName("select_time"),
 setAlarmBtn = document.querySelector("button");
 
-let alarmTime, isAlarmSet,
-ringtone = new Audio("./files/ringtone.mp3");
+let alarmTime, isAlarmSet,temp,time_limits = 1;
 
 for (let i = 12; i > 0; i--) {
     i = i < 10 ? `0${i}` : i;
@@ -41,18 +40,24 @@ let inserval = setInterval(() => {
     currentTime.innerText = `${h}:${m}:${s} ${ampm}`;
 
     if (alarmTime === `${h}:${m} ${ampm}`) {
-        ringtone.play();
-        ringtone.loop = true;
         let status = document.getElementById('motor-status');
         status.innerHTML = "ON";
         status.style = "color:#009933";
+    }
+
+    if (temp === `${h}:${m} ${ampm}`) {
+        alarmTime = "";
+        content.classList.remove("disable");
+        setAlarmBtn.innerText = "Set Timer";
+        let status = document.getElementById('motor-status');
+        status.innerHTML = "OFF";
+        status.style = "color:#ff0000";
     }
 });
 
 function setAlarm() {
     if (isAlarmSet) {
         alarmTime = "";
-        ringtone.pause();
         content.classList.remove("disable");
         setAlarmBtn.innerText = "Set Timer";
         let status = document.getElementById('motor-status');
@@ -67,6 +72,27 @@ function setAlarm() {
         return alert("Please, select a valid time to set Timer!");
     }
     alarmTime = time;
+    let minute = (parseInt(selectMenu[1].value)+parseInt(time_limits));
+    let hour = (parseInt(selectMenu[0].value));
+    minute = minute < 10 ? "0" + minute : minute;
+    if(minute >=60){
+       minute = minute - 60;
+       minute = minute < 10 ? "0" + minute : minute;
+       if(hour == 12){
+            hour = 1;
+       }
+       else{
+        hour++;
+       }
+       hour = hour < 10 ? "0" + hour : hour;
+
+    }
+
+    console.log(hour);
+    let trigger_1 = minute.toString();
+    let trigger_2 = hour.toString();
+    temp = `${trigger_2}:${trigger_1} ${selectMenu[2].value}`;
+    console.log(temp);
     isAlarmSet = true;
     content.classList.add("disable");
     setAlarmBtn.innerText = "Clear Timer";
