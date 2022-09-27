@@ -93,7 +93,7 @@ function setAlarm() {
        }
        hour = hour < 10 ? "0" + hour : hour;
     }
-
+    hour = hour < 10 ? "0" + hour : hour;
     console.log(typeof(hour));
     let trigger_1 = minute.toString();
     let trigger_2 = hour.toString();
