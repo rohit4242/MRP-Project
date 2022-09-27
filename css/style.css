@@ -307,6 +307,7 @@ hr{
   .card-01{
     flex: 100%;
     max-width: 230px;
+    height: 50px;
     display: flex;
 
   }
@@ -314,6 +315,7 @@ hr{
   .card-02{
     flex: 100%;
     max-width: 230px;
+    height: 50px;
     display: flex;
 
   }
@@ -321,6 +323,7 @@ hr{
   .card-03{
     flex: 100%;
     max-width: 230px;
+    height: 50px;
     display: flex;
 
   }
@@ -339,15 +342,15 @@ and (min-device-width : 300px)
 and (max-device-width : 480px) {
 /* Styles */
 #temp{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 #soil-moisture{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 #humidity{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
@@ -383,15 +386,15 @@ and (max-device-width : 480px) {
   width: 20px;
 }
 #temp{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 #soil-moisture{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 #humidity{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
@@ -440,8 +443,21 @@ and (max-device-width : 480px) {
   margin-top: 10px;
   margin-left: 10px;
 }
+#cp{
+  padding-left: 50px;
+  color: white;
+  font-size:20px;
+}
 
-
+.set-crop-text{
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#select-crop{
+  font-size: 20px;
+  width: 120px;
+}
 .card-01{
   flex: 100%;
   max-width: 190px;
@@ -482,6 +498,21 @@ and (max-device-width : 480px) {
 #humidity{
   margin-top: 10px;
   margin-left: 10px;
+}
+#cp{
+  padding-left: 50px;
+  color: white;
+  font-size:20px;
+}
+
+.set-crop-text{
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#select-crop{
+  font-size: 20px;
+  width: 120px;
 }
 
 .card-01{

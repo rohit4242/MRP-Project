@@ -388,6 +388,7 @@ hr {
     .card-01 {
         flex: 100%;
         max-width: 230px;
+        height: 50px;
         display: flex;
 
     }
@@ -395,6 +396,7 @@ hr {
     .card-02 {
         flex: 100%;
         max-width: 230px;
+        height: 50px;
         display: flex;
 
     }
@@ -402,6 +404,7 @@ hr {
     .card-03 {
         flex: 100%;
         max-width: 230px;
+        height: 50px;
         display: flex;
 
     }
@@ -423,17 +426,17 @@ hr {
         width: 250px;
     }
     #temp {
-        margin-top: 5px;
+        margin-top: 10px;
         margin-left: 10px;
     }
 
     #soil-moisture {
-        margin-top: 5px;
+        margin-top: 10px;
         margin-left: 10px;
     }
 
     #humidity {
-        margin-top: 5px;
+        margin-top: 10px;
         margin-left: 10px;
     }
 
@@ -475,17 +478,17 @@ hr {
         width: 20px;
     }
     #temp {
-        margin-top: 5px;
+        margin-top: 10px;
         margin-left: 10px;
     }
 
     #soil-moisture {
-        margin-top: 5px;
+        margin-top: 10px;
         margin-left: 10px;
     }
 
     #humidity {
-        margin-top: 5px;
+        margin-top: 10px;
         margin-left: 10px;
     }
 
