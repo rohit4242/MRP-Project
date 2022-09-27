@@ -82,14 +82,12 @@ function setAlarm() {
     let hour = (parseInt(selectMenu[0].value));
     if(minute >=60){
        minute = minute - 60;
-       minute = minute < 10 ? "0" + minute : minute;
        if(hour == 12){
             hour = 1;
        }
        else{
         hour++;
        }
-       hour = hour < 10 ? "0" + hour : hour;
     }
     minute = minute < 10 ? "0" + minute : minute;
     hour = hour < 10 ? "0" + hour : hour;
