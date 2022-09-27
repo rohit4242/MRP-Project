@@ -3,7 +3,7 @@ content = document.querySelector(".content"),
 selectMenu = document.getElementsByClassName("select_time"),
 setAlarmBtn = document.querySelector("button");
 
-let alarmTime, isAlarmSet,temp,time_limits = 1;
+let alarmTime, isAlarmSet,temp;
 
 for (let i = 12; i > 0; i--) {
     i = i < 10 ? `0${i}` : i;
@@ -23,7 +23,13 @@ for (let i = 2; i > 0; i--) {
     selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option);
 }
 
-let inserval = setInterval(() => {
+for (let i = 10; i > 0; i--) {
+    i = i < 10 ? `0${i}` : i;
+    let option = `<option value="${i}">${i}</option>`;
+    selectMenu[3].firstElementChild.insertAdjacentHTML("afterend", option);
+}
+
+setInterval(() => {
     let date = new Date(),
     h = date.getHours(),
     m = date.getMinutes(),
@@ -45,15 +51,16 @@ let inserval = setInterval(() => {
         status.style = "color:#009933";
     }
 
-    if (temp === `${h}:${m} ${ampm}`) {
-        alarmTime = "";
+    console.log(typeof(temp));
+    if (temp == `${h}:${m} ${ampm}`) {
+        console.log(temp);
         content.classList.remove("disable");
         setAlarmBtn.innerText = "Set Timer";
         let status = document.getElementById('motor-status');
         status.innerHTML = "OFF";
         status.style = "color:#ff0000";
     }
-});
+},1000);
 
 function setAlarm() {
     if (isAlarmSet) {
@@ -72,6 +79,7 @@ function setAlarm() {
         return alert("Please, select a valid time to set Timer!");
     }
     alarmTime = time;
+    let time_limits = selectMenu[3].value;
     let minute = (parseInt(selectMenu[1].value)+parseInt(time_limits));
     let hour = (parseInt(selectMenu[0].value));
     minute = minute < 10 ? "0" + minute : minute;
@@ -88,7 +96,7 @@ function setAlarm() {
 
     }
 
-    console.log(hour);
+    console.log(typeof(hour));
     let trigger_1 = minute.toString();
     let trigger_2 = hour.toString();
     temp = `${trigger_2}:${trigger_1} ${selectMenu[2].value}`;

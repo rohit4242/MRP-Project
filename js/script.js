@@ -1,52 +1,61 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+import { getDatabase, ref,set,} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
 
-function startStop()
-{
-    let btn = document.getElementById('start-stop');
-    let status = document.getElementById('motor-status');
+const firebaseConfig = {
+    apiKey: "AIzaSyDCuiG5lLgqhBZrmn4gJgA6ULGCiV4n8_g",
+    authDomain: "mrp-project-cbee3.firebaseapp.com",
+    databaseURL: "https://mrp-project-cbee3-default-rtdb.firebaseio.com",
+    projectId: "mrp-project-cbee3",
+    storageBucket: "mrp-project-cbee3.appspot.com",
+    messagingSenderId: "319350992561",
+    appId: "1:319350992561:web:cc873bb3961a5c7c9f7c90",
+    databaseURL: "https://mrp-project-cbee3-default-rtdb.firebaseio.com"
+  };
 
+  // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+let btn = document.getElementById('start-stop');
+let status = document.getElementById('motor-status');
+
+btn.addEventListener('click',()=>{
     if(btn.innerHTML === "Force Start"){
         btn.innerHTML = "Force Stop";
         status.innerHTML = "ON";
         status.style = "color:#009933";
+        const reference = ref(db, 'Motor Status/');
+        set(reference, {
+           motor_status:true
+        });
+        console.log("Your Motor is ON");
     }
     else{
         btn.innerHTML = "Force Start";
         status.innerHTML = "OFF";
         status.style = "color: #ff0000";
+        const reference = ref(db, 'Motor Status/');
+        set(reference, {
+           motor_status:false
+        });
+        console.log("Your Motor is OFF");
     }
-}
+});
 
-// function switchMode(){
-//   let btn = document.getElementById('switch-mode');
-//   let range1 = document.getElementById("range1");
-//   let range2 = document.getElementById("range2");
-//   let range3 = document.getElementById("range3");
-//   let cp = document.getElementById('cp');
-//   if(btn.innerHTML === "Switch To Manual Mode")
-//   {
-//     btn.innerHTML = "Switch To Automatic Mode";
-//     document.getElementById('current-preset').innerHTML = "Recommended Preset";
-//     range1.disabled = true;
-//     range2.disabled = true;
-//     range3.disabled = true;
-//     range1.style.display = 'none';
-//     range2.style.display = 'none';
-//     range3.style.display = 'none';
-//     cp.style.paddingTop = '30px';
-//   }
-//   else{
-//     btn.innerHTML = "Switch To Manual Mode";
-//     document.getElementById('current-preset').innerHTML = "Current Preset";
-//     range1.disabled = false;
-//     range2.disabled = false;
-//     range3.disabled = false;
-//     range1.style.display = 'block';
-//     range2.style.display = 'block';
-//     range3.style.display = 'block';
-//     cp.style.paddingTop = '0';
-
-//   }
-// }
+setInterval(() => {
+    if(status.innerText == 'ON')
+    {
+        const reference = ref(db, 'Motor Status/');
+        set(reference, {
+            motor_status:true
+        });
+    }
+    else{
+        const reference = ref(db, 'Motor Status/');
+        set(reference, {
+            motor_status:false
+        });
+    }
+}, 1000);
 
 let login = document.getElementById("login-btn");
 
