@@ -51,9 +51,7 @@ setInterval(() => {
         status.style = "color:#009933";
     }
 
-    console.log(typeof(temp));
     if (temp == `${h}:${m} ${ampm}`) {
-        console.log(temp);
         content.classList.remove("disable");
         setAlarmBtn.innerText = "Set Timer";
         let status = document.getElementById('motor-status');
@@ -83,6 +81,7 @@ function setAlarm() {
     let minute = (parseInt(selectMenu[1].value)+parseInt(time_limits));
     let hour = (parseInt(selectMenu[0].value));
     minute = minute < 10 ? "0" + minute : minute;
+    hour = hour < 10 ? "0" + hour : hour;
     if(minute >=60){
        minute = minute - 60;
        minute = minute < 10 ? "0" + minute : minute;
@@ -93,7 +92,6 @@ function setAlarm() {
         hour++;
        }
        hour = hour < 10 ? "0" + hour : hour;
-
     }
 
     console.log(typeof(hour));
