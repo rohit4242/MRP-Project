@@ -80,17 +80,19 @@ function setAlarm() {
     let time_limits = selectMenu[3].value;
     let minute = (parseInt(selectMenu[1].value)+parseInt(time_limits));
     let hour = (parseInt(selectMenu[0].value));
+    minute = minute < 10 ? "0" + minute : minute;
+    hour = hour < 10 ? "0" + hour : hour;
     if(minute >=60){
        minute = minute - 60;
+       minute = minute < 10 ? "0" + minute : minute;
        if(hour == 12){
             hour = 1;
+            hour = hour < 10 ? "0" + hour : hour;
        }
        else{
         hour++;
        }
     }
-    minute = minute < 10 ? "0" + minute : minute;
-    hour = hour < 10 ? "0" + hour : hour;
     console.log(typeof(hour));
     let trigger_1 = minute.toString();
     let trigger_2 = hour.toString();
