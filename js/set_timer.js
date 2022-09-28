@@ -1,3 +1,21 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+import { getDatabase, ref,set,update,onValue} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDCuiG5lLgqhBZrmn4gJgA6ULGCiV4n8_g",
+    authDomain: "mrp-project-cbee3.firebaseapp.com",
+    databaseURL: "https://mrp-project-cbee3-default-rtdb.firebaseio.com",
+    projectId: "mrp-project-cbee3",
+    storageBucket: "mrp-project-cbee3.appspot.com",
+    messagingSenderId: "319350992561",
+    appId: "1:319350992561:web:cc873bb3961a5c7c9f7c90",
+    databaseURL: "https://mrp-project-cbee3-default-rtdb.firebaseio.com"
+  };
+
+  // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
 const currentTime = document.getElementById("current_time"),
 content = document.querySelector(".content"),
 selectMenu = document.getElementsByClassName("select_time"),
@@ -69,7 +87,6 @@ function setAlarm() {
         status.innerHTML = "OFF";
         status.style = "color:#ff0000";
         return isAlarmSet = false;
-
     }
 
     let time = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}`;
@@ -101,7 +118,30 @@ function setAlarm() {
     isAlarmSet = true;
     content.classList.add("disable");
     setAlarmBtn.innerText = "Clear Timer";
-    
+    var date = new Date();
+	var current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+	var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
+	var date_time = current_date+" "+current_time;
+    const reference = ref(db, 'Motor Status/'+date_time);
+    update(reference, {
+       Starting_Time:alarmTime,
+       Ending_Time:temp
+    });
+    console.log("Your Record is added");
+
 }
 
 setAlarmBtn.addEventListener("click", setAlarm);
+
+// const reference = ref(db, 'Motor Status/');
+// onValue(reference, (snapshot) => {
+//     const data = snapshot.val();
+//     console.log(data.isTimeSeted);
+    
+//     if(data.isTimeSeted == true){
+//         return
+//     }
+//     else{
+//         setAlarmBtn.addEventListener("click", setAlarm);
+//     }
+// })

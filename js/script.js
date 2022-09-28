@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
-import { getDatabase, ref,set,} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
+import { getDatabase, ref,set,update} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDCuiG5lLgqhBZrmn4gJgA6ULGCiV4n8_g",
@@ -24,7 +24,7 @@ btn.addEventListener('click',()=>{
         status.innerHTML = "ON";
         status.style = "color:#009933";
         const reference = ref(db, 'Motor Status/');
-        set(reference, {
+        update(reference, {
            motor_status:true
         });
         console.log("Your Motor is ON");
@@ -34,7 +34,7 @@ btn.addEventListener('click',()=>{
         status.innerHTML = "OFF";
         status.style = "color: #ff0000";
         const reference = ref(db, 'Motor Status/');
-        set(reference, {
+        update(reference, {
            motor_status:false
         });
         console.log("Your Motor is OFF");
@@ -45,13 +45,13 @@ setInterval(() => {
     if(status.innerText == 'ON')
     {
         const reference = ref(db, 'Motor Status/');
-        set(reference, {
+        update(reference, {
             motor_status:true
         });
     }
     else{
         const reference = ref(db, 'Motor Status/');
-        set(reference, {
+        update(reference, {
             motor_status:false
         });
     }
