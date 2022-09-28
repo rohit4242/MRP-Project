@@ -127,8 +127,9 @@ function setAlarm() {
        Starting_Time:alarmTime,
        Ending_Time:temp
     });
-    console.log("Your Record is added");
+    sendNotification("Firebase Record",`Your Record is Added Successfully `,"","Firebase Record");
 
+    sendNotification("Motor Status",`Your Motor Will On ${alarmTime} and Finsh On The ${temp}`,"","Motor Status");
 }
 
 setAlarmBtn.addEventListener("click", setAlarm);
