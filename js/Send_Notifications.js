@@ -6,7 +6,7 @@ function sendNotification(heading,body,data,tag){
                 body:body,
                 data:data,
                 tag:tag,
-                icon:'./svg/active.png'
+                icon:'./svg/icons8-notification-58.png'
             })
             notification.addEventListener("error",e =>{
                 alert("error");

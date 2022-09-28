@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
-import { getDatabase, ref,set,update,onValue} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
+import { getDatabase, ref,set,update} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDCuiG5lLgqhBZrmn4gJgA6ULGCiV4n8_g",
@@ -128,7 +128,6 @@ function setAlarm() {
        Ending_Time:temp
     });
     sendNotification("Firebase Record",`Your Record is Added Successfully `,"","Firebase Record");
-
     sendNotification("Motor Status",`Your Motor Will On ${alarmTime} and Finsh On The ${temp}`,"","Motor Status");
 }
 
