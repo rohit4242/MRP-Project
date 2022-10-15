@@ -25,17 +25,20 @@
     <div class="row">
       <div class="card-01"><span  id="temp">Temperature <img src="svg/temp-svg.svg" width="25px">: <span id="temp_live_data">0 C</span></span>
         <select class="select_sensor" id="display_temp_sensor">
-          <option value="Average" selected >Average: 35<span>&#8451;</span></option>
+          <option disabled></option>
+          <!-- <option value="Average" selected >Average: <span id="display_temp_avg">10</span></option> -->
         </select>
       </div>
       <div class="card-02"><span id="soil-moisture">Soil Moisture <img src="svg/soil.svg" width="25px">: <span id="soil_live_data">0</span></span>
         <select class="select_sensor" id="display-soilMoisture-sensor">
-          <option value="Average" selected>Average: 45</option>
+          <!-- <option value="Average" selected>Average: 45</option> -->
+          <option disabled></option>
       </select>
       </div>
       <div class="card-03"><span  id="humidity">Humidity <img src="svg/rain.svg" width="25px">: <span id="hum_live_data">0%</span></span> 
         <select class="select_sensor" id="display-humidity-sensor">
-          <option value="Average" selected>Average: 800</option>
+          <!-- <option value="Average" selected>Average: 800</option> -->
+          <option disabled></option>
         </select>
       </div>
     </div>
@@ -92,7 +95,7 @@
   <script type="module" src="js/script.js"></script>
   <script type="module" src="js/set_timer.js"></script>
   <script type="module" src="js/displayCrops.js"></script>
-  <script src="js/displaySensorValue.js"></script>
+  <script type="module" src="js/displaySensorValue.js"></script>
   <script src="js/Send_Notifications.js"></script>
 
   <script type="text/javascript">
