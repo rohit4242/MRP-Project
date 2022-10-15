@@ -11,6 +11,46 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
+.goog-te-combo{
+  background: #00cc99;
+  max-width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+  margin: 0px !important;
+  cursor: pointer;
+}
+.goog-logo-link{
+  display: none !important;
+}
+.skiptranslate {
+  font-size: 0 !important;
+}
+
+.head_section{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  justify-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin: 6px;
+}
+.back{
+  background: #00cc99;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color:  white;
+  font-family:sans-serif;
+  font-size: 15px;
+  padding-top: 6px;
+  cursor: pointer;
+}
 .container {
   position: relative;
   width: 100%;

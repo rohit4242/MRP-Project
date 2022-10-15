@@ -43,3 +43,7 @@ sing_in.addEventListener('click',function (e){
         alert(errorMessage);
     });
 });
+let back_btn = document.getElementById("back_btn");
+back_btn.addEventListener("click",(e)=>{
+  location.replace("main.html");
+})

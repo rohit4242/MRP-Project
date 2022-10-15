@@ -28,7 +28,7 @@ btn.addEventListener('click',()=>{
            motor_status:true
         });
         console.log("Your Motor is ON");
-        sendNotification("Motor Status",`Motor is ON`,"","Motor Status");
+        sendNotification("Motor Status","Motor is ON","","Motor Status");
     }
     else{
         btn.innerHTML = "Force Start";
@@ -39,7 +39,7 @@ btn.addEventListener('click',()=>{
            motor_status:false
         });
         console.log("Your Motor is OFF");
-        sendNotification("Motor Status",`Motor is OFF`,"","Motor Status");
+        sendNotification("Motor Status","Motor is OFF","","Motor Status");
     }
 });
 

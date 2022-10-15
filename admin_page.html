@@ -17,6 +17,7 @@
   <div class="head-section">
     <div class="status">Status: <span id="motor-status">OFF</span></div>
     <div class="login" id="login-btn">Logout</div>
+    <div id="google_translate_element"></div>
   </div>
 
   <!--card layout start-->
@@ -88,13 +89,17 @@
 
   <!--card layout end-->
   <script type="module" src="js/script.js"></script>
-  <script src="js/chart.js"></script>
-  <!-- <script src="custom.js"></script> -->
-  <!-- <script type="module" src="js/fetchLiveData.js"></script> -->
   <script type="module" src="js/displayCrops.js"></script>
   <script type="module" src="js/admin_page.js"></script>
   <script src="js/displaySensorValue.js"></script>
 
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
+    
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

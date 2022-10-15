@@ -10,6 +10,26 @@ h1{
   text-align: center;
   color:#00cc99;
 }
+
+.goog-te-combo{
+  background: #00cc99;
+  max-width: 130px;
+  height: 36px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+  margin: 0px !important;
+  cursor: pointer;
+}
+.goog-logo-link{
+  display: none !important;
+}
+.skiptranslate {
+  font-size: 0 !important;
+}
+
+
 .head-section{
   display: flex;
   justify-content: center;
@@ -63,7 +83,8 @@ h1{
   flex-wrap: wrap;
   font-size: 12px;
 }
-#display-sensor{
+
+.select_sensor{
   width: 120px;
   font-family:sans-serif;
   font-size: 15px;
@@ -332,6 +353,9 @@ hr{
     flex: 100%;
     max-width: 230px;
   }
+  .goog-te-combo{
+    width: 65px;
+  }
   
  }
   
@@ -376,13 +400,16 @@ and (max-device-width : 480px) {
   flex: 100%;
   max-width: 340px;
 }
+.goog-te-combo{
+  width: 65px;
+}
 
 }
 
 /* Smartphones (landscape) ----------- */
 @media (min-width: 481px) and (max-width: 767px) {
 /* Styles */
-#display-sensor{
+.select_sensor{
   width: 20px;
 }
 #temp{
@@ -422,13 +449,16 @@ and (max-device-width : 480px) {
   flex: 100%;
   max-width: 360px;
 }
+.goog-te-combo{
+  width: 120px;
+}
 
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media (min-width: 768px) and (max-width: 1024px){
 /* Styles */
-#display-sensor{
+.select_sensor{
   width: 20px;
 }
 #temp{
@@ -484,7 +514,7 @@ and (max-device-width : 480px) {
 /* Desktops and laptops ----------- */
 @media (min-width: 1025px) and (max-width: 1280px) {
 /* Styles */
-#display-sensor{
+.select_sensor{
   width: 20px;
 }
 #temp{
