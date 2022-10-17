@@ -46,12 +46,16 @@ btn.addEventListener('click',()=>{
 setInterval(() => {
     if(status.innerText == 'ON')
     {
+        btn.innerHTML = "Force Stop";
+        status.style = "color:#009933";
         const reference = ref(db, 'Motor Status/');
         update(reference, {
             motor_status:true
         });
     }
     else{
+        btn.innerHTML = "Force Start";
+        status.style = "color: #ff0000";
         const reference = ref(db, 'Motor Status/');
         update(reference, {
             motor_status:false
